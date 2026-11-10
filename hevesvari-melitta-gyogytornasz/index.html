@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hevesvári Melitta gyógytornász | Miskolc, Soltész Nagy Kálmán u. 45.</title>
+<meta name="description" content="Hevesvári Melitta gyógytornász Miskolcon, a Soltész Nagy Kálmán u. 45. alatt. Időpont-egyeztetés telefonon: +36 30 310 8265.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Physiotherapy",
+  "name": "Hevesvári Melitta Gyógytornász",
+  "telephone": "+36 30 310 8265",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Soltész Nagy Kálmán u. 45.",
+    "addressLocality": "Miskolc",
+    "postalCode": "3527",
+    "addressCountry": "HU"
+  }
+}
+</script>
+<style>
+:root{
+  --bg:#f3f5f2;
+  --paper:#ffffff;
+  --ink:#16211f;
+  --muted:#46524f;
+  --deep:#17423d;
+  --deep-2:#0f2f2b;
+  --accent:#cfe36a;
+  --line:#d3dbd7;
+  --fail:#c9d6d2;
+  --radius:4px;
+  --maxw:1200px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Source Sans 3",system-ui,sans-serif;font-size:1.0625rem;line-height:1.6;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:"Bricolage Grotesque",Georgia,serif;line-height:1.08;margin:0;letter-spacing:-.01em}
+p{margin:0}
+.wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 1.25rem}
+:focus-visible{outline:3px solid #1f6f66;outline-offset:3px}
+.on-dark :focus-visible{outline-color:var(--accent)}
+.skip{position:absolute;left:-999px;top:0;background:var(--accent);color:var(--deep-2);padding:.6rem 1rem;z-index:100;font-weight:700}
+.skip:focus{left:1rem;top:1rem}
+
+/* Header */
+.site-header{position:sticky;top:0;z-index:50;background:rgba(243,245,242,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{text-decoration:none;display:flex;flex-direction:column;line-height:1.05}
+.brand strong{font-family:"Bricolage Grotesque",serif;font-size:1.15rem;font-weight:800;color:var(--deep)}
+.brand span{font-size:.8rem;text-transform:uppercase;letter-spacing:.14em;color:var(--muted)}
+.menu-btn{width:46px;height:46px;border:1px solid var(--line);background:var(--paper);border-radius:var(--radius);display:grid;place-items:center;cursor:pointer}
+.menu-btn span,.menu-btn span::before,.menu-btn span::after{display:block;width:20px;height:2px;background:var(--ink);position:relative;transition:transform .25s}
+.menu-btn span::before,.menu-btn span::after{content:"";position:absolute;left:0}
+.menu-btn span::before{top:-6px}.menu-btn span::after{top:6px}
+.menu-btn[aria-expanded="true"] span{background:transparent}
+.menu-btn[aria-expanded="true"] span::before{transform:translateY(6px) rotate(45deg)}
+.menu-btn[aria-expanded="true"] span::after{transform:translateY(-6px) rotate(-45deg)}
+.nav-list{position:absolute;top:68px;left:0;right:0;background:var(--bg);border-bottom:1px solid var(--line);list-style:none;margin:0;padding:.5rem 1.25rem 1.25rem;display:none}
+.nav-list.open{display:block}
+.nav-list a{display:block;padding:.85rem 0;text-decoration:none;font-weight:600;border-bottom:1px solid var(--line)}
+.nav-list .nav-call{margin-top:1rem;border:0;text-align:center;background:var(--deep);color:#fff;border-radius:var(--radius)}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:.6rem;padding:.95rem 1.4rem;font-weight:700;text-decoration:none;border-radius:var(--radius);border:2px solid transparent;transition:background .2s,color .2s,transform .2s}
+.btn-primary{background:var(--deep);color:#fff}
+.btn-primary:hover{background:var(--deep-2)}
+.btn-ghost{border-color:var(--deep);color:var(--deep)}
+.btn-ghost:hover{background:var(--deep);color:#fff}
+.btn-accent{background:var(--accent);color:var(--deep-2)}
+.btn-accent:hover{background:#e0ef8f}
+.btn svg{width:18px;height:18px;flex:none}
+
+.eyebrow{font-size:.8rem;text-transform:uppercase;letter-spacing:.16em;font-weight:700;color:#2b6a62;display:block;margin-bottom:.9rem}
+.on-dark .eyebrow{color:var(--accent)}
+
+/* Image frames */
+.frame{position:relative;overflow:hidden;background:var(--fail)}
+.frame img{width:100%;height:100%;object-fit:cover}
+.frame.img-fail img{display:none}
+.frame .tag{position:absolute;left:.75rem;bottom:.75rem;background:rgba(15,47,43,.82);color:#fff;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;padding:.25rem .55rem;border-radius:2px}
+
+/* Hero */
+.hero{padding:2.5rem 0 3.5rem}
+.hero-grid{display:grid;gap:2rem}
+.hero h1{font-size:clamp(2.6rem,9vw,5.4rem);font-weight:800;color:var(--deep)}
+.hero h1 .role{display:block;font-weight:500;font-size:.48em;color:var(--ink);margin-top:.5rem;letter-spacing:0}
+.hero .lead{margin-top:1.4rem;font-size:1.2rem;color:var(--muted);max-width:34ch}
+.hero-actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.8rem}
+.hero-facts{display:grid;grid-template-columns:1fr;gap:0;margin-top:2.2rem;border-top:1px solid var(--line)}
+.hero-facts div{padding:1rem 0;border-bottom:1px solid var(--line)}
+.hero-facts dt{font-size:.78rem;text-transform:uppercase;letter-spacing:.14em;color:var(--muted);font-weight:700}
+.hero-facts dd{margin:.2rem 0 0;font-weight:600;font-size:1.05rem}
+.hero-facts a{text-decoration:none}
+.hero-facts a:hover{text-decoration:underline}
+.hero-img{aspect-ratio:4/5;border-radius:var(--radius)}
+
+/* Services */
+.services{background:var(--deep);color:#eef3f1;padding:4rem 0}
+.services h2{font-size:clamp(2rem,6vw,3.4rem);color:#fff;max-width:16ch}
+.services-top{display:grid;gap:2rem;margin-top:2.2rem}
+.svc-intro h3{font-size:1.45rem;color:var(--accent);margin-bottom:.5rem}
+.svc-intro p{color:#d6e1de}
+.svc-intro + .svc-intro{margin-top:1.8rem}
+.services-img{aspect-ratio:16/11;border-radius:var(--radius)}
+.svc-list{list-style:none;margin:3rem 0 0;padding:0;display:grid;grid-template-columns:1fr;border-top:1px solid rgba(255,255,255,.2)}
+.svc-list li{padding:1.4rem 0;border-bottom:1px solid rgba(255,255,255,.2);display:grid;grid-template-columns:3rem 1fr;gap:.25rem 1rem}
+.svc-list .num{font-family:"Bricolage Grotesque",serif;font-weight:700;color:var(--accent);font-size:1.1rem;grid-row:span 2}
+.svc-list strong{font-size:1.12rem;color:#fff}
+.svc-list span.d{color:#cbd8d4;font-size:.98rem}
+.svc-note{margin-top:1.6rem;color:#cbd8d4;font-size:.95rem}
+
+/* About */
+.about{padding:4.5rem 0}
+.about-grid{display:grid;gap:2.2rem;align-items:center}
+.about h2{font-size:clamp(2rem,6vw,3.2rem);color:var(--deep)}
+.about p.body{margin-top:1.1rem;color:var(--muted);max-width:52ch}
+.about-imgs{position:relative}
+.about-img{aspect-ratio:5/4;border-radius:var(--radius)}
+.about-inset{display:none}
+.about-items{display:grid;grid-template-columns:1fr;gap:1rem;margin-top:2rem}
+.about-items div{background:var(--paper);border-left:4px solid var(--deep);padding:1.1rem 1.2rem}
+.about-items h3{font-size:1.1rem;color:var(--deep);margin-bottom:.3rem}
+.about-items p{color:var(--muted);font-size:.98rem}
+
+/* Steps */
+.steps{padding:4.5rem 0;background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.steps-grid{display:grid;gap:2.2rem}
+.steps h2{font-size:clamp(2rem,6vw,3.2rem);color:var(--deep);max-width:15ch}
+.steps-img{aspect-ratio:4/5;border-radius:var(--radius)}
+.step-list{list-style:none;margin:2rem 0 0;padding:0;counter-reset:s}
+.step-list li{counter-increment:s;position:relative;padding:0 0 1.6rem 3.6rem}
+.step-list li::before{content:counter(s,decimal-leading-zero);position:absolute;left:0;top:-.1rem;font-family:"Bricolage Grotesque",serif;font-weight:800;font-size:1.6rem;color:#2b6a62}
+.step-list li:not(:last-child)::after{content:"";position:absolute;left:1rem;top:2.3rem;bottom:.5rem;width:1px;background:var(--line)}
+.step-list h3{font-size:1.25rem;margin-bottom:.3rem}
+.step-list p{color:var(--muted)}
+.step-list a{font-weight:700;color:var(--deep)}
+.tips{display:grid;grid-template-columns:1fr;gap:1rem;margin-top:1rem}
+.tips div{background:var(--bg);padding:1.1rem 1.2rem;border-top:3px solid var(--accent)}
+.tips h3{font-size:1.05rem;margin-bottom:.3rem;color:var(--deep)}
+.tips p{color:var(--muted);font-size:.97rem}
+
+/* Contact */
+.contact{padding:4.5rem 0;background:var(--deep-2);color:#eef3f1}
+.contact h2{font-size:clamp(2.2rem,7vw,3.8rem);color:#fff}
+.contact .intro{margin-top:1rem;color:#cfdcd8;max-width:46ch}
+.contact-grid{display:grid;gap:2rem;margin-top:2.2rem}
+.contact-items{display:grid;grid-template-columns:1fr;gap:0;border-top:1px solid rgba(255,255,255,.2);margin-top:1.8rem}
+.contact-items div{padding:1.1rem 0;border-bottom:1px solid rgba(255,255,255,.2)}
+.contact-items h3{font-family:"Source Sans 3",sans-serif;font-size:.8rem;text-transform:uppercase;letter-spacing:.15em;color:var(--accent);font-weight:700;margin-bottom:.3rem}
+.contact-items p,.contact-items a{font-size:1.15rem;font-weight:600;color:#fff;text-decoration:none}
+.contact-items a:hover{text-decoration:underline}
+.contact-items small{display:block;color:#cfdcd8;font-size:.95rem;font-weight:400;margin-top:.2rem}
+.map{border:0;width:100%;height:340px;border-radius:var(--radius);background:#26514b;display:block}
+.contact-img{aspect-ratio:16/9;border-radius:var(--radius);margin-bottom:1rem}
+
+/* Footer */
+.site-footer{background:#0b2421;color:#c7d4d0;padding:2.4rem 0 1.6rem;font-size:.95rem}
+.footer-grid{display:grid;gap:.4rem}
+.site-footer strong{color:#fff;font-family:"Bricolage Grotesque",serif;font-size:1.1rem}
+.site-footer a{color:#fff}
+.credits{margin-top:1.6rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,.14);font-size:.8rem;color:#a9bab5;display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;justify-content:space-between}
+.credits a{color:#dfe9e6}
+
+/* Reveal */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+  .btn,.menu-btn span,.menu-btn span::before,.menu-btn span::after{transition:none}
+}
+
+/* Tablet */
+@media (min-width:768px){
+  .wrap{padding:0 2rem}
+  .hero{padding:3.5rem 0 4.5rem}
+  .hero-facts{grid-template-columns:1fr 1fr;gap:0 2rem}
+  .svc-list{grid-template-columns:1fr 1fr;column-gap:2.5rem}
+  .services-top{grid-template-columns:1fr 1fr;align-items:end}
+  .about-items,.tips,.contact-items{grid-template-columns:1fr 1fr;gap:1rem}
+  .contact-items{gap:0 2rem}
+  .steps-grid{grid-template-columns:.85fr 1.15fr;align-items:start;gap:3rem}
+  .steps-img{position:sticky;top:96px}
+}
+
+/* Desktop */
+@media (min-width:1024px){
+  .menu-btn{display:none}
+  .nav{height:76px}
+  .nav-list{position:static;display:flex !important;gap:2rem;padding:0;background:none;border:0;align-items:center}
+  .nav-list a{border:0;padding:.3rem 0;font-size:.98rem}
+  .nav-list a:not(.nav-call):hover{color:#2b6a62;text-decoration:underline;text-underline-offset:4px}
+  .nav-list .nav-call{margin:0;padding:.6rem 1.1rem}
+  .hero-grid{grid-template-columns:1.05fr .95fr;align-items:center;gap:4rem}
+  .hero{padding:4.5rem 0 5.5rem}
+  .services,.about,.steps,.contact{padding:6.5rem 0}
+  .svc-list{grid-template-columns:repeat(4,1fr);column-gap:2rem;border-top:0}
+  .svc-list li{border-bottom:0;border-top:1px solid rgba(255,255,255,.25);grid-template-columns:1fr;padding-top:1.4rem}
+  .svc-list .num{grid-row:auto;margin-bottom:.6rem}
+  .about-grid{grid-template-columns:1fr 1fr;gap:5rem}
+  .about-imgs{padding:0 0 4rem 0}
+  .about-inset{display:block;position:absolute;right:-1.5rem;bottom:0;width:48%;aspect-ratio:1/1;border:8px solid var(--bg);border-radius:var(--radius)}
+  .contact-grid{grid-template-columns:1fr 1.1fr;gap:4rem;align-items:start}
+  .map{height:420px}
+  .footer-grid{grid-template-columns:1fr auto;align-items:end}
+}
+@media (min-width:1440px){
+  :root{--maxw:1280px}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#tartalom">Ugrás a tartalomra</a>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Hevesvári Melitta gyógytornász – vissza az oldal tetejére">
+      <strong>Hevesvári Melitta</strong>
+      <span>gyógytornász · Miskolc</span>
+    </a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menü megnyitása"><span></span></button>
+    <nav aria-label="Fő navigáció">
+      <ul class="nav-list" id="menu">
+        <li><a href="#szolgaltatasok">Gyógytorna</a></li>
+        <li><a href="#rolunk">Bemutatkozás</a></li>
+        <li><a href="#kezdes">Első alkalom</a></li>
+        <li><a href="#kapcsolat">Kapcsolat</a></li>
+        <li><a class="nav-call" href="tel:+36303108265">Hívás: +36 30 310 8265</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="tartalom">
+
+<section id="top" class="hero">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <span class="eyebrow">Fizioterápia Miskolcon</span>
+      <h1>Hevesvári Melitta <span class="role">gyógytornász</span></h1>
+      <p class="lead">Mozgásterápia személyre szabottan, Miskolcon. Hívjon, és egyeztessünk időpontot.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="tel:+36303108265">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+          Időpontot kérek
+        </a>
+        <a class="btn btn-ghost" href="#kapcsolat">Hol talál meg?</a>
+      </div>
+      <dl class="hero-facts">
+        <div>
+          <dt>Cím</dt>
+          <dd>3527 Miskolc, Soltész Nagy Kálmán u. 45.</dd>
+        </div>
+        <div>
+          <dt>Telefon</dt>
+          <dd><a href="tel:+36303108265">+36 30 310 8265</a></dd>
+        </div>
+      </dl>
+    </div>
+    <div class="frame hero-img reveal">
+      <img src="https://images.pexels.com/photos/20860610/pexels-photo-20860610.jpeg?auto=compress&cs=tinysrgb&w=1440" alt="Illusztráció: gyógytornához kapcsolódó mozgásterápiás jelenet" width="1440" height="1800" fetchpriority="high" onerror="this.parentElement.classList.add('img-fail')">
+      <span class="tag">Illusztráció</span>
+    </div>
+  </div>
+</section>
+
+<section id="szolgaltatasok" class="services on-dark">
+  <div class="wrap">
+    <span class="eyebrow reveal">Gyógytorna</span>
+    <h2 class="reveal">Miben segíthet a gyógytorna?</h2>
+    <div class="services-top">
+      <div class="reveal">
+        <div class="svc-intro">
+          <h3>Mozgásszervi panaszok</h3>
+          <p>Fájdalom, merevség, korlátozott mozgás esetén a célzott torna segíthet visszanyerni a mindennapi mozgás könnyedségét.</p>
+        </div>
+        <div class="svc-intro">
+          <h3>Rehabilitáció</h3>
+          <p>Sérülés vagy műtét után a fokozatos, szakszerűen felépített gyakorlatok támogatják a felépülést.</p>
+        </div>
+      </div>
+      <div class="frame services-img reveal">
+        <img src="https://images.pexels.com/photos/20860592/pexels-photo-20860592.jpeg?auto=compress&cs=tinysrgb&w=1440" alt="Illusztráció: terápiás gyakorlat végzése" loading="lazy" width="1440" height="990" onerror="this.parentElement.classList.add('img-fail')">
+        <span class="tag">Illusztráció</span>
+      </div>
+    </div>
+    <ul class="svc-list">
+      <li class="reveal"><span class="num">01</span><strong>Hát- és derékpanaszok</strong><span class="d">Gyakorlatok a terhelhetőség és a tartás javításáért.</span></li>
+      <li class="reveal"><span class="num">02</span><strong>Nyak és váll</strong><span class="d">Mozgásterápia feszülés és beszűkült mozgás esetén.</span></li>
+      <li class="reveal"><span class="num">03</span><strong>Felépülés sérülés után</strong><span class="d">Fokozatos visszatérés a megszokott mozgáshoz.</span></li>
+      <li class="reveal"><span class="num">04</span><strong>Otthoni gyakorlatok</strong><span class="d">Útmutatás, hogy a kezelések között is haladhasson.</span></li>
+    </ul>
+    <p class="svc-note reveal">Az Önre vonatkozó pontos lehetőségekről telefonon szívesen tájékoztatom.</p>
+  </div>
+</section>
+
+<section id="rolunk" class="about">
+  <div class="wrap about-grid">
+    <div class="about-imgs reveal">
+      <div class="frame about-img">
+        <img src="https://images.pexels.com/photos/20860582/pexels-photo-20860582.jpeg?auto=compress&cs=tinysrgb&w=1440" alt="Illusztráció: nyugodt, rendezett terápiás környezet" loading="lazy" width="1440" height="1152" onerror="this.parentElement.classList.add('img-fail')">
+        <span class="tag">Illusztráció</span>
+      </div>
+      <div class="frame about-inset">
+        <img src="https://images.pexels.com/photos/20860616/pexels-photo-20860616.jpeg?auto=compress&cs=tinysrgb&w=1440" alt="Illusztráció: mozgásterápiás gyakorlat közelről" loading="lazy" width="800" height="800" onerror="this.parentElement.classList.add('img-fail')">
+      </div>
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">Bemutatkozás</span>
+      <h2>Gyógytorna Miskolcon, személyesen</h2>
+      <p class="body">Hevesvári Melitta gyógytornászként fizioterápiás kezelést nyújt Miskolcon, a Soltész Nagy Kálmán utcában. A kezelés az Ön panaszaiból és céljaiból indul ki.</p>
+      <div class="about-items">
+        <div>
+          <h3>Egyéni figyelem</h3>
+          <p>A gyakorlatokat az Ön állapotához és tempójához igazítjuk.</p>
+        </div>
+        <div>
+          <h3>Egyszerű bejelentkezés</h3>
+          <p>Időpontot telefonon kérhet: <a href="tel:+36303108265">+36 30 310 8265</a>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="kezdes" class="steps">
+  <div class="wrap steps-grid">
+    <div class="frame steps-img reveal">
+      <img src="https://images.pexels.com/photos/20860587/pexels-photo-20860587.jpeg?auto=compress&cs=tinysrgb&w=1440" alt="Illusztráció: felkészülés egy gyógytorna alkalomra" loading="lazy" width="1440" height="1800" onerror="this.parentElement.classList.add('img-fail')">
+      <span class="tag">Illusztráció</span>
+    </div>
+    <div>
+      <span class="eyebrow reveal">Első alkalom</span>
+      <h2 class="reveal">Három lépés az első kezelésig</h2>
+      <ol class="step-list">
+        <li class="reveal">
+          <h3>Hívjon fel</h3>
+          <p>Röviden mondja el, milyen panasszal keres. <a href="tel:+36303108265">+36 30 310 8265</a></p>
+        </li>
+        <li class="reveal">
+          <h3>Egyeztessünk időpontot</h3>
+          <p>Közösen keresünk Önnek megfelelő alkalmat.</p>
+        </li>
+        <li class="reveal">
+          <h3>Az első találkozás</h3>
+          <p>Felmérjük a panaszt, majd megbeszéljük a további lépéseket.</p>
+        </li>
+      </ol>
+      <div class="tips">
+        <div class="reveal">
+          <h3>Mit érdemes hozni?</h3>
+          <p>Ha van, korábbi orvosi leleteit, zárójelentését.</p>
+        </div>
+        <div class="reveal">
+          <h3>Mit vegyen fel?</h3>
+          <p>Kényelmes, mozgást nem akadályozó ruhát.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="kapcsolat" class="contact on-dark">
+  <div class="wrap">
+    <span class="eyebrow reveal">Kapcsolat</span>
+    <h2 class="reveal">Időpont-egyeztetés</h2>
+    <p class="intro reveal">Időpontot telefonon kérhet. A rendelési időkről is telefonon tájékoztatom.</p>
+    <div class="contact-grid">
+      <div class="reveal">
+        <a class="btn btn-accent" href="tel:+36303108265">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+          Hívás: +36 30 310 8265
+        </a>
+        <div class="contact-items">
+          <div>
+            <h3>Cím</h3>
+            <p>Soltész Nagy Kálmán u. 45.<small>3527 Miskolc</small></p>
+          </div>
+          <div>
+            <h3>Telefon</h3>
+            <a href="tel:+36303108265">+36 30 310 8265</a>
+            <small>Nyitvatartás: telefonos egyeztetés szerint</small>
+          </div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="frame contact-img">
+          <img src="https://images.pexels.com/photos/20860579/pexels-photo-20860579.jpeg?auto=compress&cs=tinysrgb&w=1440" alt="Illusztráció: mozgásterápiához használt eszközök és környezet" loading="lazy" width="1440" height="810" onerror="this.parentElement.classList.add('img-fail')">
+          <span class="tag">Illusztráció</span>
+        </div>
+        <iframe class="map" title="Térkép: Miskolc, Soltész Nagy Kálmán u. 45." src="https://www.google.com/maps?q=Miskolc%2C%20Solt%C3%A9sz%20Nagy%20K%C3%A1lm%C3%A1n%20u.%2045%2C%203527%20Magyarorsz%C3%A1g&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <strong>Hevesvári Melitta Gyógytornász</strong>
+        <p>3527 Miskolc, Soltész Nagy Kálmán u. 45.</p>
+        <p>Telefon: <a href="tel:+36303108265">+36 30 310 8265</a></p>
+      </div>
+      <p><a href="#top">Vissza az oldal tetejére</a></p>
+    </div>
+    <div class="credits">
+      <span>A képek illusztrációk (Pexels).</span>
+      <span>Készítette: <a href="https://auracode.hu" target="_blank" rel="noopener">AuraCode</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn=document.querySelector('.menu-btn');
+  var menu=document.getElementById('menu');
+  function close(){menu.classList.remove('open');btn.setAttribute('aria-expanded','false');btn.setAttribute('aria-label','Menü megnyitása');}
+  btn.addEventListener('click',function(){
+    var open=menu.classList.toggle('open');
+    btn.setAttribute('aria-expanded',open?'true':'false');
+    btn.setAttribute('aria-label',open?'Menü bezárása':'Menü megnyitása');
+  });
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',close);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&menu.classList.contains('open')){close();btn.focus();}});
+
+  document.querySelectorAll('.frame img').forEach(function(img){
+    if(img.complete&&img.naturalWidth===0){img.parentElement.classList.add('img-fail');}
+  });
+
+  var items=document.querySelectorAll('.reveal');
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduce||!('IntersectionObserver' in window)){
+    items.forEach(function(el){el.classList.add('in');});
+    return;
+  }
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}
+    });
+  },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  items.forEach(function(el){io.observe(el);});
+})();
+</script>
+</body>
+</html>
