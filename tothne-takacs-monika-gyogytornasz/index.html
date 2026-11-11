@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tóthné Takács Mónika gyógytornász – Rakamaz, Szent István út 9.</title>
+<meta name="description" content="Tóthné Takács Mónika gyógytornász Rakamazon, a Szent István út 9. alatt. Gyógytorna mozgásszervi panaszokra és rehabilitációhoz. Hétköznap 8:00–17:00. Időpont: +36 20 495 3087.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="https://images.pexels.com/photos/20860616/pexels-photo-20860616.jpeg?auto=compress&cs=tinysrgb&w=1440">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Tóthné Takács Mónika GYÓGYTORNÁSZ",
+  "description": "Fizioterápiás szakrendelő, gyógytorna Rakamazon.",
+  "telephone": "+36204953087",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Szent István út 9",
+    "addressLocality": "Rakamaz",
+    "postalCode": "4465",
+    "addressCountry": "HU"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "08:00",
+      "closes": "17:00"
+    }
+  ]
+}
+</script>
+<style>
+:root{
+  --bg:#f3f5f2;
+  --surface:#ffffff;
+  --ink:#18221f;
+  --muted:#4a5753;
+  --primary:#1d5249;
+  --primary-dark:#123630;
+  --accent:#e2b23a;
+  --line:#d5ddd8;
+  --fallback:#c9d8d1;
+  --radius:6px;
+  --maxw:1200px;
+  --head:"Fraunces", Georgia, "Times New Roman", serif;
+  --body:"Public Sans", "Segoe UI", Arial, sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:var(--body);font-size:1.0625rem;line-height:1.65;
+  overflow-x:hidden;
+}
+img{display:block;max-width:100%;height:auto}
+a{color:var(--primary)}
+h1,h2,h3{font-family:var(--head);line-height:1.12;margin:0;color:var(--ink);font-weight:600}
+h1{font-size:clamp(2.3rem,7vw,4.4rem);letter-spacing:-.015em}
+h2{font-size:clamp(1.85rem,4.6vw,3rem);letter-spacing:-.01em}
+h3{font-size:clamp(1.25rem,2.4vw,1.55rem)}
+p{margin:0}
+.wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 1.25rem}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:2px}
+.skip{position:absolute;left:-999px;top:0;background:var(--primary-dark);color:#fff;padding:.7rem 1rem;z-index:100}
+.skip:focus{left:1rem;top:1rem}
+.eyebrow{
+  display:inline-block;font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--primary);margin-bottom:.9rem;
+}
+.eyebrow::before{content:"";display:inline-block;width:1.8rem;height:2px;background:var(--accent);vertical-align:middle;margin-right:.6rem}
+
+/* Buttons */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
+  min-height:50px;padding:.8rem 1.4rem;border-radius:var(--radius);
+  font-weight:700;font-size:1rem;text-decoration:none;border:2px solid transparent;
+  transition:background-color .2s ease,color .2s ease,border-color .2s ease,transform .2s ease;
+}
+.btn svg{width:1.1rem;height:1.1rem;flex:none}
+.btn-primary{background:var(--primary);color:#fff}
+.btn-primary:hover{background:var(--primary-dark)}
+.btn-ghost{border-color:var(--primary);color:var(--primary);background:transparent}
+.btn-ghost:hover{background:var(--primary);color:#fff}
+.btn-accent{background:var(--accent);color:#1b1a12}
+.btn-accent:hover{background:#f0c552}
+
+/* Header */
+.site-header{
+  position:sticky;top:0;z-index:50;background:rgba(243,245,242,.94);
+  backdrop-filter:saturate(140%) blur(8px);-webkit-backdrop-filter:saturate(140%) blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;min-height:68px;gap:1rem}
+.brand{text-decoration:none;color:var(--ink);display:flex;flex-direction:column;line-height:1.1}
+.brand strong{font-family:var(--head);font-size:1.15rem;font-weight:600}
+.brand span{font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--primary);font-weight:700;margin-top:.2rem}
+.menu-toggle{
+  display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;
+  border:1px solid var(--line);background:var(--surface);border-radius:var(--radius);cursor:pointer;color:var(--ink)
+}
+.menu-toggle span,.menu-toggle span::before,.menu-toggle span::after{
+  display:block;width:22px;height:2px;background:currentColor;position:relative;transition:transform .25s ease,background-color .25s ease
+}
+.menu-toggle span::before,.menu-toggle span::after{content:"";position:absolute;left:0}
+.menu-toggle span::before{top:-7px}
+.menu-toggle span::after{top:7px}
+.menu-toggle[aria-expanded="true"] span{background:transparent}
+.menu-toggle[aria-expanded="true"] span::before{transform:translateY(7px) rotate(45deg)}
+.menu-toggle[aria-expanded="true"] span::after{transform:translateY(-7px) rotate(-45deg)}
+.nav-links{
+  position:absolute;left:0;right:0;top:100%;background:var(--bg);border-bottom:1px solid var(--line);
+  display:none;flex-direction:column;padding:.5rem 1.25rem 1.25rem;margin:0;list-style:none
+}
+.nav-links.open{display:flex}
+.nav-links a{display:block;padding:.85rem 0;text-decoration:none;color:var(--ink);font-weight:600;border-bottom:1px solid var(--line)}
+.nav-links li:last-child a{border-bottom:0}
+.nav-links .nav-cta{margin-top:.8rem;color:#fff;padding:.8rem 1.2rem;text-align:center}
+
+/* Hero */
+.hero{padding:2.2rem 0 3.5rem}
+.hero-grid{display:grid;gap:2rem}
+.hero h1 .role{display:block;font-style:italic;font-weight:500;color:var(--primary);font-size:.62em;margin-top:.35rem}
+.hero-lead{margin-top:1.2rem;font-size:1.13rem;color:var(--muted);max-width:34rem}
+.hero-actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.8rem}
+.hero-actions .btn{flex:1 1 200px}
+.hero-facts{display:grid;grid-template-columns:1fr;gap:0;margin-top:2rem;border-top:1px solid var(--line)}
+.fact{padding:1rem 0;border-bottom:1px solid var(--line);display:flex;gap:.9rem;align-items:flex-start}
+.fact svg{width:1.3rem;height:1.3rem;color:var(--primary);flex:none;margin-top:.2rem}
+.fact b{display:block;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--primary)}
+.fact span{font-weight:600}
+.media{position:relative;overflow:hidden;background:var(--fallback);border-radius:var(--radius)}
+.media img{width:100%;height:100%;object-fit:cover}
+.media.img-fallback{background:linear-gradient(135deg,var(--fallback),#a9c3b8)}
+.hero-media{aspect-ratio:4/5;max-height:620px}
+.hero-media::after{
+  content:"";position:absolute;left:0;bottom:0;width:38%;height:8px;background:var(--accent)
+}
+
+/* Services */
+.services{background:var(--surface);padding:4.5rem 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.section-head{max-width:46rem;margin-bottom:2.6rem}
+.section-head p{margin-top:1rem;color:var(--muted)}
+.service-split{display:grid;gap:2.5rem}
+.service-block .media{aspect-ratio:3/2;margin-bottom:1.3rem}
+.service-block h3{margin-bottom:.6rem}
+.service-block p{color:var(--muted)}
+.service-block p + p{margin-top:.7rem}
+.pillars{display:grid;grid-template-columns:1fr;gap:0;margin-top:3rem;border-top:2px solid var(--ink)}
+.pillar{padding:1.4rem 0;border-bottom:1px solid var(--line)}
+.pillar .num{font-family:var(--head);font-size:.95rem;color:var(--primary);font-weight:700;display:block;margin-bottom:.35rem}
+.pillar h4{font-family:var(--body);font-size:1.08rem;margin:0 0 .35rem;font-weight:700}
+.pillar p{color:var(--muted);font-size:.98rem}
+
+/* About */
+.about{padding:4.5rem 0}
+.about-grid{display:grid;gap:2.4rem;align-items:center}
+.about-media{display:grid;grid-template-columns:1fr;gap:1rem}
+.about-media .main{aspect-ratio:4/3}
+.about-media .side{aspect-ratio:16/9}
+.about-text p{color:var(--muted)}
+.about-text p + p{margin-top:1rem}
+.about-text h2{margin-bottom:1.2rem}
+.about-points{display:grid;grid-template-columns:1fr;gap:1rem;margin-top:2rem}
+.point{background:var(--surface);border-left:4px solid var(--primary);padding:1.1rem 1.2rem}
+.point h3{font-size:1.15rem;margin-bottom:.35rem}
+.point p{font-size:.98rem}
+
+/* Steps */
+.steps{background:var(--primary-dark);color:#e7efeb;padding:4.5rem 0}
+.steps h2,.steps h3{color:#fff}
+.steps .eyebrow{color:#cfe2da}
+.steps-grid{display:grid;gap:2.4rem;align-items:start}
+.steps-media{aspect-ratio:4/5;max-height:560px}
+.step-list{list-style:none;margin:2rem 0 0;padding:0;counter-reset:step}
+.step{position:relative;padding:0 0 1.8rem 4rem;counter-increment:step}
+.step::before{
+  content:counter(step,decimal-leading-zero);position:absolute;left:0;top:-.15rem;
+  font-family:var(--head);font-size:2rem;font-weight:600;color:var(--accent);line-height:1
+}
+.step:not(:last-child)::after{content:"";position:absolute;left:1.15rem;top:2.6rem;bottom:.5rem;width:1px;background:rgba(255,255,255,.22)}
+.step h3{margin-bottom:.4rem}
+.step p{color:#d3e0da}
+.step a{color:#fff;font-weight:700}
+.steps-notes{display:grid;grid-template-columns:1fr;gap:1rem;margin-top:1rem}
+.note{border:1px solid rgba(255,255,255,.22);padding:1.1rem 1.2rem;border-radius:var(--radius)}
+.note b{display:block;color:var(--accent);font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:.3rem}
+.note span{color:#f1f6f3;font-weight:600}
+
+/* Contact */
+.contact{padding:4.5rem 0}
+.contact-grid{display:grid;gap:2rem}
+.contact-cards{display:grid;grid-template-columns:1fr;gap:1rem;margin-top:1.8rem}
+.c-card{background:var(--surface);border:1px solid var(--line);padding:1.3rem 1.3rem 1.4rem;border-radius:var(--radius)}
+.c-card h3{font-size:1.2rem;margin-bottom:.7rem}
+.c-card p{color:var(--muted)}
+.c-card a{font-weight:700}
+.hours{width:100%;border-collapse:collapse;font-size:.98rem}
+.hours th,.hours td{padding:.38rem 0;text-align:left;border-bottom:1px dashed var(--line);font-weight:500}
+.hours td{text-align:right;color:var(--ink)}
+.hours tr:last-child th,.hours tr:last-child td{border-bottom:0}
+.hours tr.today th,.hours tr.today td{color:var(--primary);font-weight:700}
+.closed{color:var(--muted)!important}
+.contact-cta{margin-top:1.6rem}
+.map{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--fallback);min-height:340px}
+.map iframe{display:block;width:100%;height:100%;min-height:340px;border:0}
+
+/* Footer */
+.site-footer{background:var(--ink);color:#d9e2de;padding:2.6rem 0 1.6rem;font-size:.97rem}
+.site-footer a{color:#fff}
+.footer-grid{display:grid;gap:1.2rem}
+.footer-name{font-family:var(--head);font-size:1.25rem;color:#fff;font-weight:600}
+.footer-meta{margin-top:1.8rem;padding-top:1.2rem;border-top:1px solid rgba(255,255,255,.14);font-size:.82rem;color:#b9c6c0;display:flex;flex-wrap:wrap;gap:.4rem 1.4rem;justify-content:space-between}
+.footer-meta a{color:#e6eeea}
+
+/* Reveal */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+.no-js .reveal{opacity:1;transform:none}
+
+/* Tablet */
+@media (min-width:768px){
+  .wrap{padding:0 2rem}
+  .hero{padding:3.5rem 0 4.5rem}
+  .hero-facts{grid-template-columns:1fr 1fr;gap:0 1.5rem}
+  .service-split{grid-template-columns:1fr 1fr;gap:2.5rem}
+  .pillars{grid-template-columns:1fr 1fr;column-gap:2rem}
+  .about-media{grid-template-columns:1.4fr 1fr;align-items:end}
+  .about-media .side{aspect-ratio:3/4}
+  .about-points{grid-template-columns:1fr 1fr}
+  .steps-notes{grid-template-columns:1fr 1fr}
+  .contact-cards{grid-template-columns:1fr 1fr}
+  .footer-grid{grid-template-columns:1.3fr 1fr 1fr}
+}
+/* Desktop */
+@media (min-width:1024px){
+  .menu-toggle{display:none}
+  .nav-links{
+    position:static;display:flex;flex-direction:row;align-items:center;gap:1.8rem;
+    padding:0;border:0;background:transparent
+  }
+  .nav-links a{padding:.4rem 0;border:0;font-size:.97rem}
+  .nav-links a:not(.btn):hover{color:var(--primary)}
+  .nav-links .nav-cta{margin-top:0;padding:.6rem 1.1rem;min-height:44px}
+  .hero-grid{grid-template-columns:1.05fr .95fr;align-items:center;gap:4rem}
+  .hero{padding:4.5rem 0 5.5rem}
+  .services,.about,.steps,.contact{padding:6.5rem 0}
+  .pillars{grid-template-columns:repeat(4,1fr);column-gap:2rem}
+  .pillar{border-bottom:0;padding-right:.5rem}
+  .about-grid{grid-template-columns:1fr 1fr;gap:4.5rem}
+  .steps-grid{grid-template-columns:.85fr 1.15fr;gap:5rem;align-items:center}
+  .contact-grid{grid-template-columns:1fr 1.1fr;gap:3.5rem;align-items:stretch}
+  .map,.map iframe{min-height:100%}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none!important;animation:none!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body class="no-js">
+<a class="skip" href="#tartalom">Ugrás a tartalomra</a>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Tóthné Takács Mónika gyógytornász – vissza az oldal tetejére">
+      <strong>Tóthné Takács Mónika</strong>
+      <span>Gyógytornász · Rakamaz</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="fomenu" aria-label="Menü megnyitása">
+      <span></span>
+    </button>
+    <nav aria-label="Főmenü">
+      <ul class="nav-links" id="fomenu">
+        <li><a href="#szolgaltatasok">Gyógytorna</a></li>
+        <li><a href="#rolunk">Rólunk</a></li>
+        <li><a href="#kezdes">Első kezelés</a></li>
+        <li><a href="#kapcsolat">Kapcsolat</a></li>
+        <li><a class="btn btn-primary nav-cta" href="tel:+36204953087">+36 20 495 3087</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="tartalom">
+
+  <section id="top" class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-text">
+        <span class="eyebrow">Fizioterápia Rakamazon</span>
+        <h1>Tóthné Takács Mónika<span class="role">gyógytornász</span></h1>
+        <p class="hero-lead">Gyógytorna mozgásszervi panaszokra és rehabilitációhoz, Rakamazon, a Szent István úton. Hívjon, és egyeztessünk időpontot.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="tel:+36204953087">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+            Hívás: +36 20 495 3087
+          </a>
+          <a class="btn btn-ghost" href="#kapcsolat">Cím és nyitvatartás</a>
+        </div>
+        <div class="hero-facts">
+          <div class="fact">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            <div><b>Nyitvatartás</b><span>Hétfő–péntek 8:00–17:00</span></div>
+          </div>
+          <div class="fact">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+            <div><b>Cím</b><span>4465 Rakamaz, Szent István út 9.</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="media hero-media">
+        <img src="https://images.pexels.com/photos/20860616/pexels-photo-20860616.jpeg?auto=compress&cs=tinysrgb&w=1440"
+             alt="Illusztráció: gyógytornához kapcsolódó hangulatkép"
+             width="1440" height="1800" fetchpriority="high" decoding="async"
+             onerror="this.parentElement.classList.add('img-fallback');this.remove();">
+      </div>
+    </div>
+  </section>
+
+  <section id="szolgaltatasok" class="services">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Gyógytorna</span>
+        <h2>Miben segíthet a gyógytorna?</h2>
+        <p>A gyógytorna célja, hogy a mozgás újra könnyebb és biztonságosabb legyen. A konkrét panaszáról és a lehetőségekről telefonon szívesen tájékoztatjuk.</p>
+      </div>
+
+      <div class="service-split">
+        <article class="service-block reveal">
+          <div class="media">
+            <img src="https://images.pexels.com/photos/5793950/pexels-photo-5793950.jpeg?auto=compress&cs=tinysrgb&w=1440"
+                 alt="Illusztráció: gyógytorna gyakorlat mozgásszervi panasz enyhítésére"
+                 width="1440" height="960" loading="lazy" decoding="async"
+                 onerror="this.parentElement.classList.add('img-fallback');this.remove();">
+          </div>
+          <h3>Mozgásszervi panaszok</h3>
+          <p>Fájdalom, merevség vagy beszűkült mozgás esetén a gyógytorna célzott gyakorlatokkal segíthet. A cél a terhelhetőség fokozatos javítása.</p>
+        </article>
+        <article class="service-block reveal">
+          <div class="media">
+            <img src="https://images.pexels.com/photos/5793910/pexels-photo-5793910.jpeg?auto=compress&cs=tinysrgb&w=1440"
+                 alt="Illusztráció: rehabilitációs gyakorlat gyógytornász irányításával"
+                 width="1440" height="960" loading="lazy" decoding="async"
+                 onerror="this.parentElement.classList.add('img-fallback');this.remove();">
+          </div>
+          <h3>Rehabilitáció</h3>
+          <p>Sérülés, műtét vagy hosszabb kihagyás után a gyógytorna segít visszatérni a mindennapi mozgáshoz. Lépésről lépésre, az Ön állapotához igazodva.</p>
+        </article>
+      </div>
+
+      <div class="pillars">
+        <div class="pillar reveal">
+          <span class="num">01</span>
+          <h4>Felmérés</h4>
+          <p>A kezelés az Ön panaszainak és mozgásának megismerésével indul.</p>
+        </div>
+        <div class="pillar reveal">
+          <span class="num">02</span>
+          <h4>Egyéni gyakorlatok</h4>
+          <p>A gyakorlatok az Ön állapotához és céljaihoz igazodnak.</p>
+        </div>
+        <div class="pillar reveal">
+          <span class="num">03</span>
+          <h4>Fokozatosság</h4>
+          <p>A terhelés lépésről lépésre nő, a biztonság az első.</p>
+        </div>
+        <div class="pillar reveal">
+          <span class="num">04</span>
+          <h4>Otthoni folytatás</h4>
+          <p>A gyógytorna eredménye a rendszeres gyakorláson is múlik.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="rolunk" class="about">
+    <div class="wrap about-grid">
+      <div class="about-media reveal">
+        <div class="media main">
+          <img src="https://images.pexels.com/photos/19440815/pexels-photo-19440815.jpeg?auto=compress&cs=tinysrgb&w=1440"
+               alt="Illusztráció: nyugodt környezet gyógytornához"
+               width="1440" height="1080" loading="lazy" decoding="async"
+               onerror="this.parentElement.classList.add('img-fallback');this.remove();">
+        </div>
+        <div class="media side">
+          <img src="https://images.pexels.com/photos/5473223/pexels-photo-5473223.jpeg?auto=compress&cs=tinysrgb&w=1440"
+               alt="Illusztráció: mozgásterápiás gyakorlat részlete"
+               width="1440" height="1920" loading="lazy" decoding="async"
+               onerror="this.parentElement.classList.add('img-fallback');this.remove();">
+        </div>
+      </div>
+      <div class="about-text reveal">
+        <span class="eyebrow">Rólunk</span>
+        <h2>Gyógytorna Rakamaz szívében</h2>
+        <p>Tóthné Takács Mónika gyógytornászként fogadja pácienseit Rakamazon, a Szent István út 9. alatt.</p>
+        <p>Nem kell messzire utaznia: a kezelés helyben, a település központi útján érhető el, hétköznaponként reggel 8 és délután 5 óra között.</p>
+        <div class="about-points">
+          <div class="point">
+            <h3>Helyben, Rakamazon</h3>
+            <p>4465 Rakamaz, Szent István út 9.</p>
+          </div>
+          <div class="point">
+            <h3>Egyeztetés telefonon</h3>
+            <p><a href="tel:+36204953087">+36 20 495 3087</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="kezdes" class="steps">
+    <div class="wrap steps-grid">
+      <div class="media steps-media reveal">
+        <img src="https://images.pexels.com/photos/5793895/pexels-photo-5793895.jpeg?auto=compress&cs=tinysrgb&w=1440"
+             alt="Illusztráció: gyógytorna kezelés kezdete"
+             width="1440" height="1800" loading="lazy" decoding="async"
+             onerror="this.parentElement.classList.add('img-fallback');this.remove();">
+      </div>
+      <div class="reveal">
+        <span class="eyebrow">Első kezelés</span>
+        <h2>Három lépés az első kezelésig</h2>
+        <ol class="step-list">
+          <li class="step">
+            <h3>Hívjon fel</h3>
+            <p>Hétköznap 8:00 és 17:00 között a <a href="tel:+36204953087">+36 20 495 3087</a> számon.</p>
+          </li>
+          <li class="step">
+            <h3>Egyeztessünk időpontot</h3>
+            <p>Röviden mondja el a panaszát, és megbeszéljük az Önnek megfelelő időpontot.</p>
+          </li>
+          <li class="step">
+            <h3>Érkezzen a kezelésre</h3>
+            <p>Rakamaz, Szent István út 9. Érdemes kényelmes, mozgást nem akadályozó ruhát hoznia.</p>
+          </li>
+        </ol>
+        <div class="steps-notes">
+          <div class="note"><b>Telefon</b><span>+36 20 495 3087</span></div>
+          <div class="note"><b>Mikor hívható?</b><span>Hétfő–péntek 8:00–17:00</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="kapcsolat" class="contact">
+    <div class="wrap contact-grid">
+      <div class="reveal">
+        <span class="eyebrow">Kapcsolat</span>
+        <h2>Időpont-egyeztetés</h2>
+        <div class="contact-cards">
+          <div class="c-card">
+            <h3>Elérhetőség</h3>
+            <p>4465 Rakamaz,<br>Szent István út 9.</p>
+            <p style="margin-top:.7rem"><a href="tel:+36204953087">+36 20 495 3087</a></p>
+          </div>
+          <div class="c-card">
+            <h3>Nyitvatartás</h3>
+            <table class="hours" aria-label="Nyitvatartás">
+              <tbody>
+                <tr data-day="1"><th scope="row">Hétfő</th><td>8:00–17:00</td></tr>
+                <tr data-day="2"><th scope="row">Kedd</th><td>8:00–17:00</td></tr>
+                <tr data-day="3"><th scope="row">Szerda</th><td>8:00–17:00</td></tr>
+                <tr data-day="4"><th scope="row">Csütörtök</th><td>8:00–17:00</td></tr>
+                <tr data-day="5"><th scope="row">Péntek</th><td>8:00–17:00</td></tr>
+                <tr data-day="6"><th scope="row">Szombat</th><td class="closed">Zárva</td></tr>
+                <tr data-day="0"><th scope="row">Vasárnap</th><td class="closed">Zárva</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="contact-cta">
+          <a class="btn btn-primary" href="tel:+36204953087">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+            Hívjon most: +36 20 495 3087
+          </a>
+        </div>
+      </div>
+      <div class="map reveal">
+        <iframe src="https://www.google.com/maps?q=Rakamaz%2C%20Szent%20Istv%C3%A1n%20%C3%BAt%209%2C%204465%20Magyarorsz%C3%A1g&output=embed"
+                title="Térkép: Tóthné Takács Mónika gyógytornász, Rakamaz, Szent István út 9."
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-name">Tóthné Takács Mónika gyógytornász</div>
+        <p>Fizioterápiás szakrendelő</p>
+      </div>
+      <div>
+        <p>4465 Rakamaz,<br>Szent István út 9.</p>
+        <p><a href="tel:+36204953087">+36 20 495 3087</a></p>
+      </div>
+      <div>
+        <p>Hétfő–péntek: 8:00–17:00<br>Szombat–vasárnap: zárva</p>
+      </div>
+    </div>
+    <div class="footer-meta">
+      <span>Az oldalon szereplő fotók illusztrációk (Pexels).</span>
+      <span>Készítette: <a href="https://auracode.hu" target="_blank" rel="noopener">AuraCode</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  document.body.classList.remove('no-js');
+
+  var toggle = document.querySelector('.menu-toggle');
+  var menu = document.getElementById('fomenu');
+  function closeMenu(){
+    menu.classList.remove('open');
+    toggle.setAttribute('aria-expanded','false');
+    toggle.setAttribute('aria-label','Menü megnyitása');
+  }
+  toggle.addEventListener('click', function(){
+    var open = menu.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    toggle.setAttribute('aria-label', open ? 'Menü bezárása' : 'Menü megnyitása');
+  });
+  menu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeMenu); });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && menu.classList.contains('open')){ closeMenu(); toggle.focus(); }
+  });
+  window.addEventListener('resize', function(){ if(window.innerWidth >= 1024) closeMenu(); });
+
+  var today = new Date().getDay();
+  var row = document.querySelector('.hours tr[data-day="' + today + '"]');
+  if(row) row.classList.add('today');
+
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var items = document.querySelectorAll('.reveal');
+  if(reduce || !('IntersectionObserver' in window)){
+    items.forEach(function(el){ el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){ entry.target.classList.add('in'); io.unobserve(entry.target); }
+      });
+    }, {threshold:0.12, rootMargin:'0px 0px -40px 0px'});
+    items.forEach(function(el){ io.observe(el); });
+  }
+})();
+</script>
+</body>
+</html>
