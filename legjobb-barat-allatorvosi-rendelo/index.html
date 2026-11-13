@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Legjobb Barát Állatorvosi Rendelő – Állatorvos Kaposváron, Pázmány Péter u. 39.</title>
+<meta name="description" content="Legjobb Barát Állatorvosi Rendelő Kaposváron, a Pázmány Péter u. 39. alatt. Időpont-egyeztetés telefonon: +36 20 920 8148.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Legjobb Barát Állatorvosi Rendelő",
+  "telephone": "+36 20 920 8148",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Pázmány Péter u. 39",
+    "addressLocality": "Kaposvár",
+    "postalCode": "7400",
+    "addressCountry": "HU"
+  }
+}
+</script>
+<style>
+:root{
+  --pine:#1d4a40;
+  --pine-dark:#14342d;
+  --pine-soft:#e3ece8;
+  --sun:#e8b23a;
+  --sun-dark:#c48f17;
+  --bg:#f6f8f6;
+  --paper:#ffffff;
+  --ink:#1a2421;
+  --muted:#4a5753;
+  --line:#d5dfdb;
+  --radius-s:6px;
+  --radius-l:22px;
+  --head:"Fraunces",Georgia,serif;
+  --body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--body);font-size:1.0625rem;line-height:1.65;color:var(--ink);background:var(--bg);overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:var(--pine)}
+h1,h2,h3{font-family:var(--head);line-height:1.12;margin:0 0 .6em;color:var(--pine-dark);font-weight:600;letter-spacing:-.01em}
+h1{font-size:clamp(2.4rem,8vw,4.4rem)}
+h2{font-size:clamp(1.9rem,5vw,2.9rem)}
+h3{font-size:1.35rem}
+p{margin:0 0 1em}
+:focus-visible{outline:3px solid var(--sun-dark);outline-offset:3px;border-radius:4px}
+.wrap{width:100%;max-width:1200px;margin:0 auto;padding:0 20px}
+.skip{position:absolute;left:-9999px;top:0;background:var(--pine);color:#fff;padding:10px 16px;z-index:100}
+.skip:focus{left:12px;top:12px}
+.eyebrow{display:inline-block;font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--sun-dark);margin-bottom:14px}
+
+/* Header */
+.site-head{position:sticky;top:0;z-index:50;background:rgba(246,248,246,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.head-in{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{font-family:var(--head);font-weight:700;font-size:1.15rem;color:var(--pine-dark);text-decoration:none;line-height:1.1}
+.brand small{display:block;font-family:var(--body);font-weight:500;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.nav-toggle{width:46px;height:46px;border:1px solid var(--line);background:var(--paper);border-radius:var(--radius-s);display:flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;cursor:pointer}
+.nav-toggle span{width:20px;height:2px;background:var(--pine-dark);transition:transform .25s,opacity .25s}
+.nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+.nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.nav{position:absolute;left:0;right:0;top:68px;background:var(--bg);border-bottom:1px solid var(--line);display:none}
+.nav.open{display:block}
+.nav ul{list-style:none;margin:0;padding:8px 20px 20px}
+.nav a{display:block;padding:12px 0;text-decoration:none;color:var(--ink);font-weight:600;border-bottom:1px solid var(--line)}
+.nav .nav-call{margin-top:14px;border:0;text-align:center}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 26px;border-radius:var(--radius-s);font-weight:700;text-decoration:none;font-size:1rem;transition:background .2s,transform .2s,color .2s;border:2px solid transparent}
+.btn-primary{background:var(--pine);color:#fff}
+.btn-primary:hover{background:var(--pine-dark)}
+.btn-sun{background:var(--sun);color:var(--pine-dark)}
+.btn-sun:hover{background:#f0c25a}
+.btn-ghost{border-color:var(--pine);color:var(--pine)}
+.btn-ghost:hover{background:var(--pine);color:#fff}
+.btn svg{width:18px;height:18px;flex:none}
+
+/* Image frames */
+.frame{position:relative;overflow:hidden;background:var(--pine-soft)}
+.frame img{width:100%;height:100%;object-fit:cover}
+.frame.img-fallback{background:linear-gradient(140deg,var(--pine-soft),#c9dad3)}
+
+/* Hero */
+.hero{padding:40px 0 64px}
+.hero-grid{display:grid;gap:36px}
+.hero h1 span{display:block;font-size:.5em;font-family:var(--body);font-weight:600;color:var(--pine);letter-spacing:0;margin-top:.5em}
+.hero-lead{font-size:1.15rem;color:var(--muted);max-width:34em}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 30px}
+.hero-facts{display:grid;gap:12px;grid-template-columns:1fr}
+.fact{background:var(--paper);border-left:4px solid var(--sun);padding:14px 18px;border-radius:0 var(--radius-s) var(--radius-s) 0}
+.fact b{display:block;font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);font-weight:700}
+.fact a,.fact span{color:var(--ink);font-weight:600;text-decoration:none}
+.fact a:hover{text-decoration:underline}
+.hero .frame{aspect-ratio:4/5;border-radius:var(--radius-l) var(--radius-l) var(--radius-l) 4px}
+
+/* Services */
+.services{padding:72px 0;background:var(--paper)}
+.services-head{max-width:720px;margin-bottom:40px}
+.services-head p{color:var(--muted)}
+.duo{display:grid;gap:28px;margin-bottom:48px}
+.duo-item{display:grid;gap:18px}
+.duo-item .frame{aspect-ratio:16/10;border-radius:4px}
+.duo-item p{color:var(--muted)}
+.cards{display:grid;gap:0;border-top:2px solid var(--pine-dark)}
+.card{padding:24px 4px 26px;border-bottom:1px solid var(--line)}
+.card .num{font-family:var(--head);font-size:1rem;color:var(--sun-dark);font-weight:700;display:block;margin-bottom:8px}
+.card h4{font-family:var(--head);font-size:1.2rem;margin:0 0 6px;color:var(--pine-dark);font-weight:600}
+.card p{margin:0;color:var(--muted);font-size:1rem}
+.note{margin-top:22px;font-size:.95rem;color:var(--muted)}
+
+/* About */
+.about{padding:80px 0}
+.about-grid{display:grid;gap:40px;align-items:center}
+.about .frame{aspect-ratio:5/4;border-radius:var(--radius-l)}
+.about-text p{color:var(--muted)}
+.about-points{display:grid;gap:14px;margin-top:26px}
+.point{background:var(--pine-soft);padding:18px 20px;border-radius:var(--radius-s)}
+.point h3{font-size:1.1rem;margin-bottom:4px}
+.point p{margin:0;font-size:1rem;color:var(--ink)}
+
+/* Steps */
+.steps{padding:80px 0;background:var(--pine);color:#eef4f1}
+.steps h2,.steps h3{color:#fff}
+.steps-grid{display:grid;gap:40px;align-items:center}
+.steps .frame{aspect-ratio:4/3;border-radius:4px var(--radius-l) 4px var(--radius-l);background:var(--pine-dark)}
+.steps .frame.img-fallback{background:linear-gradient(140deg,#2a6255,var(--pine-dark))}
+.step-list{list-style:none;margin:28px 0 30px;padding:0;display:grid;gap:22px;counter-reset:s}
+.step-list li{display:grid;grid-template-columns:52px 1fr;gap:16px;counter-increment:s}
+.step-list li::before{content:counter(s);width:52px;height:52px;border-radius:50%;background:var(--sun);color:var(--pine-dark);font-family:var(--head);font-weight:700;font-size:1.35rem;display:flex;align-items:center;justify-content:center}
+.step-list h3{margin:4px 0 4px;font-size:1.2rem}
+.step-list p{margin:0;color:#d6e4de}
+
+/* Contact */
+.contact{padding:80px 0 72px}
+.contact-head{max-width:640px;margin-bottom:34px}
+.contact-head p{color:var(--muted)}
+.contact-grid{display:grid;gap:28px}
+.contact-items{display:grid;gap:14px;align-content:start}
+.c-item{background:var(--paper);border:1px solid var(--line);padding:20px 22px;border-radius:var(--radius-s)}
+.c-item h3{font-size:1.05rem;margin-bottom:6px;font-family:var(--body);font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
+.c-item p{margin:0;font-weight:600}
+.c-item a{text-decoration:none;font-weight:700;font-size:1.2rem}
+.c-item a:hover{text-decoration:underline}
+.contact .btn{margin-top:6px;width:100%}
+.map{border-radius:var(--radius-l);overflow:hidden;border:1px solid var(--line);background:var(--pine-soft);min-height:320px}
+.map iframe{width:100%;height:100%;min-height:320px;border:0;display:block}
+
+/* Footer */
+.site-foot{background:var(--pine-dark);color:#d6e4de;padding:40px 0 28px;font-size:.98rem}
+.site-foot strong{font-family:var(--head);font-size:1.2rem;color:#fff;font-weight:600;display:block;margin-bottom:8px}
+.site-foot a{color:#fff}
+.foot-meta{margin-top:26px;padding-top:18px;border-top:1px solid rgba(255,255,255,.15);font-size:.82rem;color:#b9cdc5;display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between}
+
+/* Reveal */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+
+@media (min-width:600px){
+  .hero-facts{grid-template-columns:1fr 1fr}
+  .about-points{grid-template-columns:1fr 1fr}
+  .cards{grid-template-columns:1fr 1fr;column-gap:32px}
+}
+@media (min-width:768px){
+  .wrap{padding:0 32px}
+  .duo{grid-template-columns:1fr 1fr;gap:36px}
+  .contact-grid{grid-template-columns:1fr 1.3fr}
+  .contact .btn{width:auto}
+  .map,.map iframe{min-height:420px}
+}
+@media (min-width:1000px){
+  .nav-toggle{display:none}
+  .nav{display:block;position:static;background:none;border:0}
+  .nav ul{display:flex;align-items:center;gap:28px;padding:0}
+  .nav a{border:0;padding:6px 0;font-size:.97rem}
+  .nav a:not(.btn):hover{color:var(--pine)}
+  .nav .nav-call{margin:0;padding:11px 18px}
+  .hero{padding:64px 0 96px}
+  .hero-grid{grid-template-columns:1.1fr .9fr;gap:64px;align-items:center}
+  .cards{grid-template-columns:repeat(4,1fr);column-gap:28px}
+  .about-grid{grid-template-columns:.95fr 1.05fr;gap:72px}
+  .steps-grid{grid-template-columns:1fr 1fr;gap:72px}
+  .steps-grid .frame{order:2}
+  .services,.about,.steps,.contact{padding:110px 0}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+  *{transition:none!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#tartalom">Ugrás a tartalomra</a>
+
+<header class="site-head">
+  <div class="wrap head-in">
+    <a class="brand" href="#top">Legjobb Barát<small>Állatorvosi Rendelő · Kaposvár</small></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="Menü megnyitása">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav" id="nav" aria-label="Fő navigáció">
+      <ul>
+        <li><a href="#szolgaltatasok">Ellátás</a></li>
+        <li><a href="#rolunk">Rendelő</a></li>
+        <li><a href="#kezdes">Időpont</a></li>
+        <li><a href="#kapcsolat">Kapcsolat</a></li>
+        <li><a class="btn btn-primary nav-call" href="tel:+36209208148">+36 20 920 8148</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="tartalom">
+
+<section id="top" class="hero">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <span class="eyebrow">Állatorvos · Kaposvár</span>
+      <h1>Legjobb Barát<span>Állatorvosi Rendelő</span></h1>
+      <p class="hero-lead">Kedvence egészsége gondos kezekben. Rendelőnk Kaposváron, a Pázmány Péter utcában várja Önt és háziállatát. Időpontot telefonon egyeztethet.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="tel:+36209208148">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+          Hívjon most
+        </a>
+        <a class="btn btn-ghost" href="#szolgaltatasok">Miben segítünk?</a>
+      </div>
+      <div class="hero-facts">
+        <div class="fact"><b>Cím</b><span>7400 Kaposvár, Pázmány Péter u. 39.</span></div>
+        <div class="fact"><b>Telefon</b><a href="tel:+36209208148">+36 20 920 8148</a></div>
+      </div>
+    </div>
+    <div class="frame reveal">
+      <img src="https://images.pexels.com/photos/6235231/pexels-photo-6235231.jpeg?auto=compress&cs=tinysrgb&w=1440" alt="Illusztráció: háziállat állatorvosi vizsgálaton" width="720" height="900" fetchpriority="high" onerror="this.parentElement.classList.add('img-fallback');this.remove()">
+    </div>
+  </div>
+</section>
+
+<section id="szolgaltatasok" class="services">
+  <div class="wrap">
+    <div class="services-head reveal">
+      <span class="eyebrow">Ellátás</span>
+      <h2>Miben segíthet az állatorvos?</h2>
+      <p>Legyen szó hirtelen panaszról vagy rendszeres ellenőrzésről, érdemes időben szakemberhez fordulni.</p>
+    </div>
+    <div class="duo">
+      <div class="duo-item reveal">
+        <div class="frame">
+          <img src="https://images.pexels.com/photos/6235114/pexels-photo-6235114.jpeg?auto=compress&cs=tinysrgb&w=1440" alt="Illusztráció: állatorvos megvizsgál egy háziállatot" loading="lazy" width="800" height="500" onerror="this.parentElement.classList.add('img-fallback');this.remove()">
+        </div>
+        <div>
+          <h3>Ha valami nincs rendben</h3>
+          <p>Étvágytalanság, levertség, sántítás vagy szokatlan viselkedés? Ne várjon vele. Hívjon, és megbeszéljük, mikor tudja behozni kedvencét.</p>
+        </div>
+      </div>
+      <div class="duo-item reveal">
+        <div class="frame">
+          <img src="https://images.pexels.com/photos/6235011/pexels-photo-6235011.jpeg?auto=compress&cs=tinysrgb&w=1440" alt="Illusztráció: nyugodt háziállat az állatorvosi rendelőben" loading="lazy" width="800" height="500" onerror="this.parentElement.classList.add('img-fallback');this.remove()">
+        </div>
+        <div>
+          <h3>Megelőzés, rendszeresen</h3>
+          <p>Sok probléma megelőzhető. A rendszeres állatorvosi ellenőrzés segít, hogy kedvence hosszú távon egészséges maradjon.</p>
+        </div>
+      </div>
+    </div>
+    <div class="cards">
+      <div class="card reveal"><span class="num">01</span><h4>Vizsgálat</h4><p>Kedvence állapotának alapos felmérése.</p></div>
+      <div class="card reveal"><span class="num">02</span><h4>Panaszok kivizsgálása</h4><p>Ha tünetet észlel, közösen keressük az okát.</p></div>
+      <div class="card reveal"><span class="num">03</span><h4>Megelőző kezelések</h4><p>Rendszeres ellenőrzés az egészség megőrzéséért.</p></div>
+      <div class="card reveal"><span class="num">04</span><h4>Tanácsadás</h4><p>Kérdések a gondozásról, tartásról, mindennapokról.</p></div>
+    </div>
+    <p class="note">Az elérhető ellátásokról és a részletekről telefonon szívesen tájékoztatjuk.</p>
+  </div>
+</section>
+
+<section id="rolunk" class="about">
+  <div class="wrap about-grid">
+    <div class="frame reveal">
+      <img src="https://images.pexels.com/photos/6235653/pexels-photo-6235653.jpeg?auto=compress&cs=tinysrgb&w=1440" alt="Illusztráció: gazdi és háziállata az állatorvosnál" loading="lazy" width="800" height="640" onerror="this.parentElement.classList.add('img-fallback');this.remove()">
+    </div>
+    <div class="about-text reveal">
+      <span class="eyebrow">A rendelő</span>
+      <h2>Állatorvos Kaposváron, a Pázmány Péter utcában</h2>
+      <p>A Legjobb Barát Állatorvosi Rendelő Kaposváron várja a háziállatokat és gazdáikat. A neve is mutatja: kedvence nekünk is a legjobb barát.</p>
+      <p>Kérdése van, vagy időpontot szeretne? Egy telefonhívás, és megbeszéljük a részleteket.</p>
+      <div class="about-points">
+        <div class="point"><h3>Könnyen megtalál</h3><p>Pázmány Péter u. 39., 7400 Kaposvár</p></div>
+        <div class="point"><h3>Egyszerű egyeztetés</h3><p>Időpont telefonon: +36 20 920 8148</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="kezdes" class="steps">
+  <div class="wrap steps-grid">
+    <div class="frame reveal">
+      <img src="https://images.pexels.com/photos/6235108/pexels-photo-6235108.jpeg?auto=compress&cs=tinysrgb&w=1440" alt="Illusztráció: háziállat gondos állatorvosi ellátásban" loading="lazy" width="800" height="600" onerror="this.parentElement.classList.add('img-fallback');this.remove()">
+    </div>
+    <div class="reveal">
+      <span class="eyebrow" style="color:var(--sun)">Így kezdjük</span>
+      <h2>Három lépés az első vizsgálatig</h2>
+      <ol class="step-list">
+        <li><div><h3>Hívjon fel</h3><p>Mondja el röviden, mi a gond, vagy miért hozná kedvencét.</p></div></li>
+        <li><div><h3>Egyeztessünk időpontot</h3><p>Közösen keresünk Önnek megfelelő időpontot.</p></div></li>
+        <li><div><h3>Érkezzen kedvencével</h3><p>Várjuk a rendelőben: Kaposvár, Pázmány Péter u. 39.</p></div></li>
+      </ol>
+      <a class="btn btn-sun" href="tel:+36209208148">Hívás: +36 20 920 8148</a>
+    </div>
+  </div>
+</section>
+
+<section id="kapcsolat" class="contact">
+  <div class="wrap">
+    <div class="contact-head reveal">
+      <span class="eyebrow">Kapcsolat</span>
+      <h2>Időpont-egyeztetés</h2>
+      <p>Hívjon minket, és egyeztessünk időpontot kedvence számára.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-items reveal">
+        <div class="c-item"><h3>Telefon</h3><a href="tel:+36209208148">+36 20 920 8148</a></div>
+        <div class="c-item"><h3>Cím</h3><p>7400 Kaposvár, Pázmány Péter u. 39.</p></div>
+        <div class="c-item"><h3>Nyitvatartás</h3><p>A rendelési időről telefonon tájékoztatjuk.</p></div>
+        <a class="btn btn-primary" href="tel:+36209208148">Hívjon most</a>
+      </div>
+      <div class="map reveal">
+        <iframe src="https://www.google.com/maps?q=Kaposv%C3%A1r%2C%20P%C3%A1zm%C3%A1ny%20P%C3%A9ter%20u.%2039%2C%207400%20Magyarorsz%C3%A1g&output=embed" title="Legjobb Barát Állatorvosi Rendelő térképen – Kaposvár, Pázmány Péter u. 39." loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <strong>Legjobb Barát Állatorvosi Rendelő</strong>
+    <div>7400 Kaposvár, Pázmány Péter u. 39.</div>
+    <div>Telefon: <a href="tel:+36209208148">+36 20 920 8148</a></div>
+    <div class="foot-meta">
+      <span>Illusztrációs fotók: Pexels</span>
+      <span>Készítette: <a href="https://auracode.hu" target="_blank" rel="noopener">AuraCode</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn=document.querySelector('.nav-toggle');
+  var nav=document.getElementById('nav');
+  function close(){nav.classList.remove('open');btn.setAttribute('aria-expanded','false');btn.setAttribute('aria-label','Menü megnyitása');}
+  btn.addEventListener('click',function(){
+    var open=nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded',open?'true':'false');
+    btn.setAttribute('aria-label',open?'Menü bezárása':'Menü megnyitása');
+  });
+  nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',close);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&nav.classList.contains('open')){close();btn.focus();}});
+
+  var items=document.querySelectorAll('.reveal');
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduce||!('IntersectionObserver' in window)){
+    items.forEach(function(el){el.classList.add('in');});
+    return;
+  }
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});
+  },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  items.forEach(function(el){io.observe(el);});
+})();
+</script>
+</body>
+</html>
