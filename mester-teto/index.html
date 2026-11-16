@@ -27,18 +27,15 @@
   - A korábbi "Tetők, amilyenekkel dolgozunk" alblokk megszűnt; a Pexels-fotók a Referenciák rácsába kerültek a saját
     képek után. Minden ilyen kép "Illusztráció" felirattal és ennek megfelelő alt szöveggel van jelölve, hogy a látogató
     ne tévessze össze őket a saját munkákkal.
-  - Ha egy kép nem tölthető be, az üres doboz automatikusan eltűnik; ha egyetlen saját kép sem jelenik meg, egy
-    Facebookra mutató tájékoztató blokk látszik. A Facebook-képek ugyanide cserélhetők (közvetlen képhivatkozással).
+  - Ha egy kép nem tölthető be, az üres doboz automatikusan eltűnik. A korábbi, Facebookra mutató tájékoztató
+    blokk ("A referenciaképek jelenleg nem tölthetők be...") kérésre eltávolítva.
   - A Referenciák szekcióban jól látható Facebook gomb vezet a további képekhez.
 -->
 <script>
 window.galCheck=function(){
   var grid=document.getElementById('gal-grid');
-  var fb=document.getElementById('gal-fallback');
-  if(!grid||!fb){return;}
-  var own=grid.querySelectorAll('.img-box.own:not(.gone)').length;
+  if(!grid){return;}
   var all=grid.querySelectorAll('.img-box:not(.gone)').length;
-  if(own===0){fb.hidden=false;}
   if(all===0){grid.style.display='none';}
 };
 window.galFail=function(img){
@@ -190,9 +187,6 @@ section{padding:4rem 0}
 .gallery-grid .img-box.gone{display:none}
 .gallery-note{color:var(--muted);max-width:60ch}
 .gallery .more{margin-top:2rem;display:flex;flex-wrap:wrap;gap:.8rem}
-.gal-fallback{margin-top:2rem;background:var(--paper);border-left:4px solid var(--copper);padding:1.75rem 1.5rem}
-.gal-fallback p{color:var(--muted);margin-bottom:1.25rem;max-width:60ch}
-.gal-fallback[hidden]{display:none}
 .img-box .tag{position:absolute;left:.5rem;bottom:.5rem;background:rgba(29,39,48,.88);color:#fff;font-family:var(--head);font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;padding:.15rem .55rem}
 
 .cta{position:relative;color:#fff;padding:5rem 0;overflow:hidden;background:var(--slate)}
@@ -439,10 +433,6 @@ footer .credit a{color:var(--copper-light)}
         <div class="img-box illus reveal"><img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600" alt="Illusztráció: lakóház tetővel" loading="lazy" width="600" height="450" onerror="galFail(this)"><span class="tag">Illusztráció</span></div>
         <div class="img-box illus reveal"><img src="https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600" alt="Illusztráció: lakóház tetőszerkezete" loading="lazy" width="600" height="450" onerror="galFail(this)"><span class="tag">Illusztráció</span></div>
         <div class="img-box illus reveal"><img src="https://images.pexels.com/photos/1029599/pexels-photo-1029599.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600" alt="Illusztráció: családi ház teteje" loading="lazy" width="600" height="450" onerror="galFail(this)"><span class="tag">Illusztráció</span></div>
-      </div>
-      <div class="gal-fallback" id="gal-fallback" hidden="">
-        <p>A referenciaképek jelenleg nem tölthetők be. Elkészült munkáinkról készült fotóinkat a Facebook-oldalunkon tekintheti meg.</p>
-        <a class="btn btn-fb" href="https://www.facebook.com/profile.php?id=61591715376362" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3c-2.8 0-4 1.7-4 4.2V10H7v4h3v8h4v-8h3l1-4h-4V8.5c0-.3.2-.5.5-.5z"></path></svg>Képek megtekintése a Facebookon</a>
       </div>
 
       <div class="more reveal">
