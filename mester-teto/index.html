@@ -24,31 +24,27 @@
   - Az "Előnyeink" szekció ("Megbízható munka, tartós eredmény") közvetlenül a hero után található.
   - A Referenciák szekcióban a vállalkozás saját, valódi képei szerepelnek. A képek "no-referrer" beállítással töltődnek,
     hogy a forrásoldal hivatkozásvédelme ne akadályozza a megjelenítést.
-  - Ha egy kép mégsem tölthető be, az üres doboz automatikusan eltűnik; ha egyik sem jelenik meg, egy Facebookra mutató
-    tájékoztató blokk látszik helyette. A Facebook-képek ugyanide cserélhetők (közvetlen képhivatkozással).
-  - A saját képek alatt külön, egyértelműen "Illusztráció" felirattal jelölt Pexels-fotók szerepelnek (az oldalon már
-    használt képekből), hogy a látogató ne tévessze össze őket a saját munkákkal.
+  - A korábbi "Tetők, amilyenekkel dolgozunk" alblokk megszűnt; a Pexels-fotók a Referenciák rácsába kerültek a saját
+    képek után. Minden ilyen kép "Illusztráció" felirattal és ennek megfelelő alt szöveggel van jelölve, hogy a látogató
+    ne tévessze össze őket a saját munkákkal.
+  - Ha egy kép nem tölthető be, az üres doboz automatikusan eltűnik; ha egyetlen saját kép sem jelenik meg, egy
+    Facebookra mutató tájékoztató blokk látszik. A Facebook-képek ugyanide cserélhetők (közvetlen képhivatkozással).
   - A Referenciák szekcióban jól látható Facebook gomb vezet a további képekhez.
 -->
 <script>
-window.galFail=function(img){
-  var box=img.parentNode;
-  if(box&&box.classList){box.classList.add('gone');}
-  if(window.galCheck){window.galCheck();}
-};
 window.galCheck=function(){
   var grid=document.getElementById('gal-grid');
   var fb=document.getElementById('gal-fallback');
   if(!grid||!fb){return;}
-  var visible=grid.querySelectorAll('.img-box:not(.gone)').length;
-  if(visible===0){grid.style.display='none';fb.hidden=false;}
+  var own=grid.querySelectorAll('.img-box.own:not(.gone)').length;
+  var all=grid.querySelectorAll('.img-box:not(.gone)').length;
+  if(own===0){fb.hidden=false;}
+  if(all===0){grid.style.display='none';}
 };
-window.illusFail=function(img){
+window.galFail=function(img){
   var box=img.parentNode;
   if(box&&box.classList){box.classList.add('gone');}
-  var grid=document.getElementById('illus-grid');
-  var wrap=document.getElementById('illus-wrap');
-  if(grid&&wrap&&grid.querySelectorAll('.img-box:not(.gone)').length===0){wrap.style.display='none';}
+  if(window.galCheck){window.galCheck();}
 };
 </script>
 <style>
@@ -197,11 +193,6 @@ section{padding:4rem 0}
 .gal-fallback{margin-top:2rem;background:var(--paper);border-left:4px solid var(--copper);padding:1.75rem 1.5rem}
 .gal-fallback p{color:var(--muted);margin-bottom:1.25rem;max-width:60ch}
 .gal-fallback[hidden]{display:none}
-.illus-wrap{margin-top:3rem;padding-top:2rem;border-top:1px solid var(--line)}
-.illus-wrap h3{margin-bottom:.3rem}
-.illus-note{color:var(--muted);font-size:.95rem;max-width:60ch;margin:0}
-.illus-grid{margin-top:1.25rem}
-.illus-grid .img-box{aspect-ratio:4/3}
 .img-box .tag{position:absolute;left:.5rem;bottom:.5rem;background:rgba(29,39,48,.88);color:#fff;font-family:var(--head);font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;padding:.15rem .55rem}
 
 .cta{position:relative;color:#fff;padding:5rem 0;overflow:hidden;background:var(--slate)}
@@ -433,32 +424,25 @@ footer .credit a{color:var(--copper-light)}
       <span class="eyebrow">Referenciák</span>
       <h2>Tetőfedés a gyakorlatban</h2>
       <div class="gallery-top">
-        <p class="gallery-note">Válogatás a Mester Tető saját képeiből. Továbbiakat a Facebook-oldalunkon talál.</p>
+        <p class="gallery-note">Válogatás a Mester Tető saját képeiből. Az „Illusztráció” felirattal jelölt fotók (Pexels) nem saját munkáinkat ábrázolják. Továbbiakat a Facebook-oldalunkon talál.</p>
         <a class="btn btn-fb" href="https://www.facebook.com/profile.php?id=61591715376362" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3c-2.8 0-4 1.7-4 4.2V10H7v4h3v8h4v-8h3l1-4h-4V8.5c0-.3.2-.5.5-.5z"></path></svg>Képek a Facebookon</a>
       </div>
       <div class="gallery-grid" id="gal-grid">
-        <div class="img-box wide reveal"><img src="https://mesterteto.hu/admin/picture.php?pic=../bannerek-kozep/bannerek_elemei/1284665189/pic.jpg&amp;size=480" alt="Kép a Mester Tető galériájából, 1." referrerpolicy="no-referrer" width="480" height="240" onerror="galFail(this)"></div>
-        <div class="img-box reveal"><img src="https://mesterteto.hu/admin/picture.php?pic=../bannerek-jobb/bannerek_elemei/1284664299/pic.jpg&amp;size=210" alt="Kép a Mester Tető galériájából, 2." referrerpolicy="no-referrer" width="210" height="210" onerror="galFail(this)"></div>
-        <div class="img-box reveal"><img src="https://mesterteto.hu/admin/picture.php?pic=../hirek/hirek_elemei/1354824164/pic.jpg&amp;size=210" alt="Kép a Mester Tető galériájából, 3." referrerpolicy="no-referrer" width="210" height="210" onerror="galFail(this)"></div>
-        <div class="img-box reveal"><img src="https://mesterteto.hu/admin/picture.php?pic=../hirek/hirek_elemei/1354824103/pic.jpg&amp;size=210" alt="Kép a Mester Tető galériájából, 4." referrerpolicy="no-referrer" width="210" height="210" onerror="galFail(this)"></div>
-        <div class="img-box reveal"><img src="https://mesterteto.hu/admin/picture.php?pic=../hirek/hirek_elemei/1300637632/pic.jpg&amp;size=210" alt="Kép a Mester Tető galériájából, 5." referrerpolicy="no-referrer" width="210" height="210" onerror="galFail(this)"></div>
-        <div class="img-box reveal"><img src="https://mesterteto.hu/admin/picture.php?pic=../hirek-jobb/hirek_elemei/1356893412/pic.jpg&amp;size=210" alt="Kép a Mester Tető galériájából, 6." referrerpolicy="no-referrer" width="210" height="210" onerror="galFail(this)"></div>
-        <div class="img-box reveal"><img src="https://mesterteto.hu/admin/picture.php?pic=../hirek-jobb/hirek_elemei/1354216176/pic.jpg&amp;size=210" alt="Kép a Mester Tető galériájából, 7." referrerpolicy="no-referrer" width="210" height="210" onerror="galFail(this)"></div>
+        <div class="img-box own wide reveal"><img src="https://mesterteto.hu/admin/picture.php?pic=../bannerek-kozep/bannerek_elemei/1284665189/pic.jpg&amp;size=480" alt="Kép a Mester Tető galériájából, 1." referrerpolicy="no-referrer" width="480" height="240" onerror="galFail(this)"></div>
+        <div class="img-box own reveal"><img src="https://mesterteto.hu/admin/picture.php?pic=../bannerek-jobb/bannerek_elemei/1284664299/pic.jpg&amp;size=210" alt="Kép a Mester Tető galériájából, 2." referrerpolicy="no-referrer" width="210" height="210" onerror="galFail(this)"></div>
+        <div class="img-box own reveal"><img src="https://mesterteto.hu/admin/picture.php?pic=../hirek/hirek_elemei/1354824164/pic.jpg&amp;size=210" alt="Kép a Mester Tető galériájából, 3." referrerpolicy="no-referrer" width="210" height="210" onerror="galFail(this)"></div>
+        <div class="img-box own reveal"><img src="https://mesterteto.hu/admin/picture.php?pic=../hirek/hirek_elemei/1354824103/pic.jpg&amp;size=210" alt="Kép a Mester Tető galériájából, 4." referrerpolicy="no-referrer" width="210" height="210" onerror="galFail(this)"></div>
+        <div class="img-box own reveal"><img src="https://mesterteto.hu/admin/picture.php?pic=../hirek/hirek_elemei/1300637632/pic.jpg&amp;size=210" alt="Kép a Mester Tető galériájából, 5." referrerpolicy="no-referrer" width="210" height="210" onerror="galFail(this)"></div>
+        <div class="img-box own reveal"><img src="https://mesterteto.hu/admin/picture.php?pic=../hirek-jobb/hirek_elemei/1356893412/pic.jpg&amp;size=210" alt="Kép a Mester Tető galériájából, 6." referrerpolicy="no-referrer" width="210" height="210" onerror="galFail(this)"></div>
+        <div class="img-box own reveal"><img src="https://mesterteto.hu/admin/picture.php?pic=../hirek-jobb/hirek_elemei/1354216176/pic.jpg&amp;size=210" alt="Kép a Mester Tető galériájából, 7." referrerpolicy="no-referrer" width="210" height="210" onerror="galFail(this)"></div>
+        <div class="img-box illus reveal"><img src="https://images.pexels.com/photos/186077/pexels-photo-186077.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600" alt="Illusztráció: családi ház cseréptetővel" loading="lazy" width="600" height="450" onerror="galFail(this)"><span class="tag">Illusztráció</span></div>
+        <div class="img-box illus reveal"><img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600" alt="Illusztráció: lakóház tetővel" loading="lazy" width="600" height="450" onerror="galFail(this)"><span class="tag">Illusztráció</span></div>
+        <div class="img-box illus reveal"><img src="https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600" alt="Illusztráció: lakóház tetőszerkezete" loading="lazy" width="600" height="450" onerror="galFail(this)"><span class="tag">Illusztráció</span></div>
+        <div class="img-box illus reveal"><img src="https://images.pexels.com/photos/1029599/pexels-photo-1029599.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600" alt="Illusztráció: családi ház teteje" loading="lazy" width="600" height="450" onerror="galFail(this)"><span class="tag">Illusztráció</span></div>
       </div>
       <div class="gal-fallback" id="gal-fallback" hidden="">
         <p>A referenciaképek jelenleg nem tölthetők be. Elkészült munkáinkról készült fotóinkat a Facebook-oldalunkon tekintheti meg.</p>
         <a class="btn btn-fb" href="https://www.facebook.com/profile.php?id=61591715376362" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3c-2.8 0-4 1.7-4 4.2V10H7v4h3v8h4v-8h3l1-4h-4V8.5c0-.3.2-.5.5-.5z"></path></svg>Képek megtekintése a Facebookon</a>
-      </div>
-
-      <div class="illus-wrap" id="illus-wrap">
-        <h3 class="reveal">Tetők, amilyenekkel dolgozunk</h3>
-        <p class="illus-note reveal">Az alábbi fotók illusztrációk (Pexels), nem a Mester Tető saját munkáit ábrázolják. Elkészült munkáinkat a Facebook-oldalunkon nézheti meg.</p>
-        <div class="gallery-grid illus-grid" id="illus-grid">
-          <div class="img-box reveal"><img src="https://images.pexels.com/photos/186077/pexels-photo-186077.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600" alt="Illusztráció: családi ház cseréptetővel" loading="lazy" width="600" height="450" onerror="illusFail(this)"><span class="tag">Illusztráció</span></div>
-          <div class="img-box reveal"><img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600" alt="Illusztráció: lakóház tetővel" loading="lazy" width="600" height="450" onerror="illusFail(this)"><span class="tag">Illusztráció</span></div>
-          <div class="img-box reveal"><img src="https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600" alt="Illusztráció: lakóház tetőszerkezete" loading="lazy" width="600" height="450" onerror="illusFail(this)"><span class="tag">Illusztráció</span></div>
-          <div class="img-box reveal"><img src="https://images.pexels.com/photos/1029599/pexels-photo-1029599.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600" alt="Illusztráció: családi ház teteje" loading="lazy" width="600" height="450" onerror="illusFail(this)"><span class="tag">Illusztráció</span></div>
-        </div>
       </div>
 
       <div class="more reveal">
@@ -521,7 +505,6 @@ footer .credit a{color:var(--copper-light)}
     document.querySelectorAll('img').forEach(function(img){
       if(img.complete&&img.naturalWidth===0&&img.getAttribute('src')){
         if(img.closest('#gal-grid')){window.galFail(img);}
-        else if(img.closest('#illus-grid')){window.illusFail(img);}
         else{img.parentNode.classList.add('img-fail');img.style.display='none';}
       }
     });
