@@ -3,7 +3,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mester Tető – Tetőfedő | Hívjon: +36 70 313 3973</title>
-<meta name="description" content="Mester Tető, tetőfedő. Tetőfedés, tetőfelújítás és tetőjavítás ügyében hívjon minket a +36 70 313 3973-as számon, vagy írjon a Facebook-oldalunkon.">
+<meta name="description" content="Mester Tető, tetőfedő. Tetőfedés, tetőjavítás, tetőfelújítás, beázások megszüntetése és bádogos munkák. Ingyenes helyszíni felmérés, garancia az elvégzett munkára. Hívjon: +36 70 313 3973.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&amp;family=Source+Sans+3:wght@400;600;700&amp;display=swap" rel="stylesheet">
@@ -21,6 +21,7 @@
 <!--
   MEGJEGYZÉS A MÓDOSÍTÁSHOZ:
   - A "Tetőfedőt keres a házához?" szekció az oldal utolsó szekciója; a menü "Kapcsolat" pontja erre mutat.
+  - Az "Előnyeink" szekció ("Megbízható munka, tartós eredmény") közvetlenül a hero után található.
   - A Referenciák szekcióban a vállalkozás saját, valódi képei szerepelnek. A képek "no-referrer" beállítással töltődnek,
     hogy a forrásoldal hivatkozásvédelme ne akadályozza a megjelenítést.
   - Ha egy kép mégsem tölthető be, az üres doboz automatikusan eltűnik; ha egyik sem jelenik meg, egy Facebookra mutató
@@ -83,6 +84,12 @@ p{margin:0 0 1em}
 .img-box img{width:100%;height:100%;object-fit:cover}
 .img-box.img-fail{background:var(--fail)}
 
+/* Check ikon */
+.check{flex-shrink:0;width:42px;height:42px;background:var(--copper-dark);display:inline-flex;align-items:center;justify-content:center}
+.check svg{width:22px;height:22px;fill:none;stroke:#fff;stroke-width:3;stroke-linecap:square;stroke-linejoin:miter}
+.check.sm{width:32px;height:32px}
+.check.sm svg{width:18px;height:18px}
+
 /* Header */
 .site-header{position:sticky;top:0;z-index:50;background:var(--slate);color:#fff;border-bottom:3px solid var(--copper)}
 .bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:68px}
@@ -134,6 +141,15 @@ p{margin:0 0 1em}
 
 /* Sections */
 section{padding:4rem 0}
+
+/* Előnyök */
+.benefits{background:var(--paper)}
+.benefits-head{max-width:760px}
+.benefits-head p{color:var(--muted)}
+.benefit-list{list-style:none;display:grid;grid-template-columns:1fr;gap:1rem;margin:2rem 0 0;padding:0}
+.benefit{display:flex;gap:1rem;align-items:center;background:var(--bg);padding:1.25rem 1.25rem;border-top:3px solid var(--copper)}
+.benefit h3{font-size:1.35rem;margin:0}
+
 .about-grid{display:grid;gap:2.5rem;align-items:center}
 .about-media{position:relative;padding-bottom:3rem}
 .about-media .main{aspect-ratio:4/5;max-height:560px;width:85%}
@@ -149,9 +165,11 @@ section{padding:4rem 0}
 .service-row{display:grid;gap:1.5rem;align-items:center;margin-top:2.5rem}
 .service-row .img-box{aspect-ratio:16/10}
 .service-row p{color:var(--muted)}
-.cards{display:grid;grid-template-columns:1fr;gap:1rem;margin-top:3rem}
+.cards-title{margin-top:3.5rem;margin-bottom:0}
+.cards{display:grid;grid-template-columns:1fr;gap:1rem;margin-top:1.5rem}
 .card{background:var(--bg);padding:1.5rem;border-left:4px solid var(--copper)}
-.card h3{font-size:1.3rem;margin-bottom:.4rem}
+.card .card-head{display:flex;align-items:center;gap:.75rem;margin-bottom:.6rem}
+.card h3{font-size:1.3rem;margin:0}
 .card p{margin:0;color:var(--muted);font-size:1rem}
 
 .gallery-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.75rem;margin-top:2rem}
@@ -191,8 +209,10 @@ footer .credit a{color:var(--copper-light)}
   .facts{grid-template-columns:repeat(3,1fr)}
   .fact{border-bottom:0;border-right:1px solid rgba(255,255,255,.12);padding:1.6rem 1.75rem}
   .fact:last-child{border-right:0}
+  .benefit-list{grid-template-columns:repeat(2,1fr)}
   .steps{grid-template-columns:repeat(2,1fr);column-gap:2rem}
   .cards{grid-template-columns:repeat(2,1fr)}
+  .cards .card:last-child{grid-column:span 2}
   .service-row{grid-template-columns:1fr 1fr;gap:2.5rem}
   .service-row.flip .img-box{order:2}
   .gallery-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
@@ -205,9 +225,11 @@ footer .credit a{color:var(--copper-light)}
   .nav .nav-call{margin:0;padding:.6rem 1.1rem}
   .hero{padding-top:5rem}
   .hero-grid{grid-template-columns:1.05fr 1fr;gap:3.5rem}
+  .benefit-list{grid-template-columns:repeat(4,1fr)}
   .about-grid{grid-template-columns:1fr 1.1fr;gap:4.5rem}
   .steps{grid-template-columns:repeat(4,1fr)}
-  .cards{grid-template-columns:repeat(4,1fr)}
+  .cards{grid-template-columns:repeat(5,1fr)}
+  .cards .card:last-child{grid-column:auto}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -237,6 +259,7 @@ footer .credit a{color:var(--copper-light)}
     </button>
     <nav class="nav" id="fomenu" aria-label="Főmenü">
       <ul>
+        <li><a href="#elonyok">Előnyeink</a></li>
         <li><a href="#rolunk">Rólunk</a></li>
         <li><a href="#szolgaltatasok">Szolgáltatások</a></li>
         <li><a href="#referenciak">Referenciák</a></li>
@@ -253,9 +276,9 @@ footer .credit a{color:var(--copper-light)}
     <div class="wrap">
       <div class="hero-grid">
         <div>
-          <span class="eyebrow">Tetőfedő</span>
+          <span class="eyebrow">Megbízható munka, tartós eredmény</span>
           <h1>Mester Tető <span>Tető, ami véd</span></h1>
-          <p class="lead">Tetőfedési, felújítási vagy javítási munkát tervez? Hívjon, és beszéljük meg, mire van szüksége a házának.</p>
+          <p class="lead">Tetőfedés, tetőjavítás, tetőfelújítás, beázások megszüntetése és bádogos munkák. Hívjon, és beszéljük meg, mire van szüksége a házának.</p>
           <div class="actions">
             <a class="btn btn-primary" href="tel:+36703133973">Hívás: +36 70 313 3973</a>
             <a class="btn btn-light" href="#szolgaltatasok">Szolgáltatások</a>
@@ -281,10 +304,37 @@ footer .credit a{color:var(--copper-light)}
     </div>
     <div class="wrap">
       <div class="facts">
-        <div class="fact"><strong>Tetőfedés</strong>Ez a szakterületünk, ehhez értünk.</div>
+        <div class="fact"><strong>Ingyenes felmérés</strong>Helyszíni felmérés díjmentesen.</div>
         <div class="fact"><strong>Telefonon</strong><a href="tel:+36703133973">+36 70 313 3973</a></div>
         <div class="fact"><strong>Facebookon</strong><a href="https://www.facebook.com/profile.php?id=61591715376362" target="_blank" rel="noopener">Írjon nekünk üzenetet</a></div>
       </div>
+    </div>
+  </section>
+
+  <section id="elonyok" class="benefits">
+    <div class="wrap">
+      <div class="benefits-head reveal">
+        <span class="eyebrow">Miért minket?</span>
+        <h2>Megbízható munka, tartós eredmény</h2>
+      </div>
+      <ul class="benefit-list">
+        <li class="benefit reveal">
+          <span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12.5 L9.5 18 L20 6.5"></path></svg></span>
+          <h3>Minőségi munkavégzés</h3>
+        </li>
+        <li class="benefit reveal">
+          <span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12.5 L9.5 18 L20 6.5"></path></svg></span>
+          <h3>Tapasztalt szakemberek</h3>
+        </li>
+        <li class="benefit reveal">
+          <span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12.5 L9.5 18 L20 6.5"></path></svg></span>
+          <h3>Ingyenes helyszíni felmérés</h3>
+        </li>
+        <li class="benefit reveal">
+          <span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12.5 L9.5 18 L20 6.5"></path></svg></span>
+          <h3>Garancia az elvégzett munkára</h3>
+        </li>
+      </ul>
     </div>
   </section>
 
@@ -299,15 +349,15 @@ footer .credit a{color:var(--copper-light)}
           <span class="eyebrow">Rólunk</span>
           <h2>Szakszerű tetőfedés, gondos kivitelezés</h2>
           <p>A tető az egész házat védi az esőtől, a széltől és a hótól. Ha itt hiba van, az előbb-utóbb a falakon és a födémen is megjelenik.</p>
-          <p>Ezért a munka a pontos egyeztetéssel kezdődik: elmondja, mi a gond vagy mit tervez, mi pedig megbeszéljük Önnel a lehetőségeket.</p>
+          <p>Ezért a munka a pontos egyeztetéssel és ingyenes helyszíni felméréssel kezdődik: elmondja, mi a gond vagy mit tervez, mi pedig megbeszéljük Önnel a lehetőségeket. Az elvégzett munkára garanciát vállalunk.</p>
           <a class="btn btn-primary" href="tel:+36703133973">Egyeztessünk telefonon</a>
         </div>
       </div>
       <div class="steps">
         <div class="step reveal"><div class="num">01</div><h3>Kapcsolatfelvétel</h3><p>Hívjon minket telefonon, vagy írjon a Facebook-oldalunkon, és röviden ismertesse, milyen tetőmunkára van szüksége.</p></div>
-        <div class="step reveal"><div class="num">02</div><h3>Igényfelmérés</h3><p>Közösen áttekintjük a tető állapotát, az Ön elképzeléseit és a szóba jöhető megoldásokat.</p></div>
+        <div class="step reveal"><div class="num">02</div><h3>Ingyenes felmérés</h3><p>Az ingyenes helyszíni felmérésen közösen áttekintjük a tető állapotát, az Ön elképzeléseit és a szóba jöhető megoldásokat.</p></div>
         <div class="step reveal"><div class="num">03</div><h3>Kivitelezés</h3><p>Az egyeztetett megoldás szerint, gondosan és szakszerűen elvégezzük a munkát.</p></div>
-        <div class="step reveal"><div class="num">04</div><h3>Munkaátadás</h3><p>A kész tetőt Önnel együtt tekintjük át, és csak ezután zárjuk le a munkát.</p></div>
+        <div class="step reveal"><div class="num">04</div><h3>Munkaátadás</h3><p>A kész tetőt Önnel együtt tekintjük át, és csak ezután zárjuk le a munkát. Az elvégzett munkára garanciát vállalunk.</p></div>
       </div>
     </div>
   </section>
@@ -330,11 +380,28 @@ footer .credit a{color:var(--copper-light)}
           <p>Elöregedett, sérült vagy beázó tető esetén érdemes időben lépni. Mondja el, mit tapasztal, és megbeszéljük a teendőket.</p>
         </div>
       </div>
+      <h3 class="cards-title reveal">Amit vállalunk</h3>
       <div class="cards">
-        <div class="card reveal"><h3>Új tető</h3><p>Fedés új építésű házra, a terveknek megfelelően.</p></div>
-        <div class="card reveal"><h3>Héjazatcsere</h3><p>A régi, elhasznált fedés cseréje.</p></div>
-        <div class="card reveal"><h3>Javítás</h3><p>Sérült, hiányzó vagy elmozdult elemek pótlása.</p></div>
-        <div class="card reveal"><h3>Egyeztetés</h3><p>Kérdéseire telefonon vagy Facebookon válaszolunk.</p></div>
+        <div class="card reveal">
+          <div class="card-head"><span class="check sm" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12.5 L9.5 18 L20 6.5"></path></svg></span><h3>Tetőfedés</h3></div>
+          <p>Új tető fedése vagy a régi héjazat cseréje.</p>
+        </div>
+        <div class="card reveal">
+          <div class="card-head"><span class="check sm" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12.5 L9.5 18 L20 6.5"></path></svg></span><h3>Tetőjavítás</h3></div>
+          <p>Sérült, hiányzó vagy elmozdult elemek pótlása.</p>
+        </div>
+        <div class="card reveal">
+          <div class="card-head"><span class="check sm" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12.5 L9.5 18 L20 6.5"></path></svg></span><h3>Tetőfelújítás</h3></div>
+          <p>Elöregedett, elhasznált tető felújítása.</p>
+        </div>
+        <div class="card reveal">
+          <div class="card-head"><span class="check sm" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12.5 L9.5 18 L20 6.5"></path></svg></span><h3>Beázások megszüntetése</h3></div>
+          <p>Beázó tető esetén a probléma megszüntetése.</p>
+        </div>
+        <div class="card reveal">
+          <div class="card-head"><span class="check sm" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12.5 L9.5 18 L20 6.5"></path></svg></span><h3>Bádogos munkák</h3></div>
+          <p>Bádogos munkák a tetőn – a részleteket egyeztetjük Önnel.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -365,7 +432,7 @@ footer .credit a{color:var(--copper-light)}
     <div class="bg img-box"><img src="https://images.pexels.com/photos/280222/pexels-photo-280222.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1800" alt="" loading="lazy" width="1800" height="1000" onerror="this.parentNode.classList.add('img-fail');this.style.display='none'"></div>
     <div class="wrap reveal">
       <h2>Tetőfedőt keres a házához?</h2>
-      <p>Ne várja meg, amíg a kis hibából beázás lesz. Hívjon, és beszéljük meg a tetőjét.</p>
+      <p>Ne várja meg, amíg a kis hibából beázás lesz. Hívjon, és kérjen ingyenes helyszíni felmérést!</p>
       <a class="phone-big" href="tel:+36703133973">+36 70 313 3973</a>
       <div class="actions">
         <a class="btn btn-light" href="tel:+36703133973">Hívjon most</a>
@@ -388,7 +455,8 @@ footer .credit a{color:var(--copper-light)}
       <div class="f-name">Mester Tető</div>
     </div>
     <ul>
-      <li>Tetőfedő</li>
+      <li>Tetőfedő – megbízható munka, tartós eredmény</li>
+      <li>Tetőfedés · Tetőjavítás · Tetőfelújítás · Beázások megszüntetése · Bádogos munkák</li>
       <li>Telefon: <a href="tel:+36703133973">+36 70 313 3973</a></li>
       <li><a href="https://www.facebook.com/profile.php?id=61591715376362" target="_blank" rel="noopener">Facebook</a></li>
     </ul>
