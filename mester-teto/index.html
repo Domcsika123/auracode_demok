@@ -22,6 +22,7 @@
   MEGJEGYZÉS A MÓDOSÍTÁSHOZ:
   - A "Tetőfedőt keres a házához?" szekció az oldal utolsó szekciója; a menü "Kapcsolat" pontja erre mutat.
   - Az "Előnyeink" szekció ("Megbízható munka, tartós eredmény") közvetlenül a hero után található.
+  - A hero-ból a rajzolódó ház-animáció kérésre eltávolítva; a hero háttérképe megmaradt.
   - A Referenciák szekcióban a vállalkozás saját, valódi képei szerepelnek. A képek "no-referrer" beállítással töltődnek,
     hogy a forrásoldal hivatkozásvédelme ne akadályozza a megjelenítést.
   - A korábbi "Tetők, amilyenekkel dolgozunk" alblokk megszűnt; a Pexels-fotók a Referenciák rácsába kerültek a saját
@@ -123,24 +124,11 @@ p{margin:0 0 1em}
 .hero .bg{position:absolute;inset:0}
 .hero .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(18,24,30,.95) 0%,rgba(18,24,30,.85) 45%,rgba(18,24,30,.6) 100%)}
 .hero .wrap{position:relative;z-index:1}
-.hero-grid{display:grid;gap:2rem;align-items:center}
+.hero-content{max-width:760px}
 .hero .eyebrow{color:var(--copper-light)}
 .hero h1 span{display:block;color:var(--copper-light)}
 .hero .lead{font-size:1.2rem;color:#d9dee2;max-width:36ch}
 .hero .actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.5rem}
-.house-art{width:100%;max-width:520px;margin:0 auto}
-.house-art svg{width:100%;height:auto;display:block;overflow:visible}
-.house-art .ln{fill:none;stroke:#fff;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:0;animation:draw 1.4s ease both}
-.house-art .ln.cu{stroke:var(--copper-light);stroke-width:4}
-.house-art .ln.thin{stroke-width:2;opacity:.75}
-.house-art .d1{animation-delay:.1s}.house-art .d2{animation-delay:.5s}.house-art .d3{animation-delay:1s}
-.house-art .d4{animation-delay:1.4s}.house-art .d5{animation-delay:1.8s}.house-art .d6{animation-delay:2.1s}
-.house-art .smoke{fill:none;stroke:#b9c1c8;stroke-width:2.5;stroke-linecap:round;opacity:0;animation:smoke 3.2s ease-in-out 2.6s infinite}
-.house-art .smoke.s2{animation-delay:3.7s}
-.house-art .glow{fill:var(--copper);opacity:0;animation:glow 1s ease 2.4s forwards}
-@keyframes draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
-@keyframes smoke{0%{opacity:0;transform:translateY(8px)}30%{opacity:.8}100%{opacity:0;transform:translateY(-22px)}}
-@keyframes glow{to{opacity:.35}}
 .facts{display:grid;grid-template-columns:1fr;margin-top:3rem;background:rgba(29,39,48,.92);border-top:3px solid var(--copper);color:#fff;position:relative;z-index:1}
 .fact{padding:1.4rem 1.25rem;border-bottom:1px solid rgba(255,255,255,.12)}
 .fact strong{display:block;font-family:var(--head);font-size:1.45rem;text-transform:uppercase;letter-spacing:.03em;color:var(--copper-light)}
@@ -231,7 +219,6 @@ footer .credit a{color:var(--copper-light)}
   .nav a{border:0;padding:.4rem 0;font-size:1.1rem}
   .nav .nav-call{margin:0;padding:.6rem 1.1rem}
   .hero{padding-top:5rem}
-  .hero-grid{grid-template-columns:1.05fr 1fr;gap:3.5rem}
   .benefit-list{grid-template-columns:repeat(4,1fr)}
   .about-grid{grid-template-columns:1fr 1.1fr;gap:4.5rem}
   .steps{grid-template-columns:repeat(4,1fr)}
@@ -242,7 +229,6 @@ footer .credit a{color:var(--copper-light)}
   html{scroll-behavior:auto}
   .reveal{opacity:1;transform:none;transition:none}
   *{transition:none!important;animation:none!important}
-  .house-art .glow{opacity:.35}
 }
 </style>
 </head>
@@ -281,31 +267,13 @@ footer .credit a{color:var(--copper-light)}
   <section class="hero" id="top">
     <div class="bg img-box"><img src="https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1800" alt="" width="1800" height="1200" onerror="this.parentNode.classList.add('img-fail');this.style.display='none'"></div>
     <div class="wrap">
-      <div class="hero-grid">
-        <div>
-          <span class="eyebrow">Megbízható munka, tartós eredmény</span>
-          <h1>Mester Tető <span>Tető, ami véd</span></h1>
-          <p class="lead">Tetőfedés, tetőjavítás, tetőfelújítás, beázások megszüntetése és bádogos munkák. Hívjon, és beszéljük meg, mire van szüksége a házának.</p>
-          <div class="actions">
-            <a class="btn btn-primary" href="tel:+36703133973">Hívás: +36 70 313 3973</a>
-            <a class="btn btn-light" href="#szolgaltatasok">Szolgáltatások</a>
-          </div>
-        </div>
-        <div class="house-art" aria-hidden="true">
-          <svg viewBox="0 0 400 320">
-            <circle class="glow" cx="200" cy="200" r="0"></circle>
-            <path class="ln thin d1" pathLength="1" d="M20 290 H380"></path>
-            <path class="ln d2" pathLength="1" d="M85 290 V165 M315 165 V290"></path>
-            <path class="ln cu d3" pathLength="1" d="M55 175 L200 58 L345 175"></path>
-            <path class="ln d4" pathLength="1" d="M262 108 V68 H290 V130"></path>
-            <path class="ln thin d4" pathLength="1" d="M115 145 H285 M145 120 H255 M172 98 H228"></path>
-            <path class="ln d5" pathLength="1" d="M178 290 V218 H222 V290"></path>
-            <path class="ln d5" pathLength="1" d="M108 192 H152 V234 H108 Z"></path>
-            <path class="ln d5" pathLength="1" d="M248 192 H292 V234 H248 Z"></path>
-            <path class="ln thin d6" pathLength="1" d="M130 192 V234 M108 213 H152 M270 192 V234 M248 213 H292"></path>
-            <path class="smoke" d="M276 58 q-8 -8 0 -16 q8 -8 0 -16"></path>
-            <path class="smoke s2" d="M276 58 q8 -8 0 -16 q-8 -8 0 -16"></path>
-          </svg>
+      <div class="hero-content">
+        <span class="eyebrow">Megbízható munka, tartós eredmény</span>
+        <h1>Mester Tető <span>Tető, ami véd</span></h1>
+        <p class="lead">Tetőfedés, tetőjavítás, tetőfelújítás, beázások megszüntetése és bádogos munkák. Hívjon, és beszéljük meg, mire van szüksége a házának.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="tel:+36703133973">Hívás: +36 70 313 3973</a>
+          <a class="btn btn-light" href="#szolgaltatasok">Szolgáltatások</a>
         </div>
       </div>
     </div>
@@ -502,9 +470,6 @@ footer .credit a{color:var(--copper-light)}
   }
   checkImgs();
   window.addEventListener('load',checkImgs);
-
-  var glow=document.querySelector('.house-art .glow');
-  if(glow){glow.setAttribute('r','0');glow.style.transformOrigin='200px 200px';}
 
   var items=document.querySelectorAll('.reveal');
   var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
