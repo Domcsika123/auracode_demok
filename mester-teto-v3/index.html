@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="hu"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mester Tető – Tetőfedő | Hívjon: +36 70 313 3973</title>
+<meta name="description" content="Mester Tető, tetőfedő. Tetőfedés, tetőfelújítás és tetőjavítás ügyében hívjon minket a +36 70 313 3973-as számon, vagy írjon a Facebook-oldalunkon.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&amp;family=Source+Sans+3:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "RoofingContractor",
+  "name": "Mester Tető",
+  "telephone": "+36703133973",
+  "logo": "https://mesterteto.hu/templates/img/logo.jpg",
+  "image": "https://mesterteto.hu/_reklam/reklamkep.jpg",
+  "sameAs": ["https://www.facebook.com/profile.php?id=61591715376362"]
+}
+</script>
+<style>
+:root{
+  --slate:#1d2730;
+  --slate-2:#2b3742;
+  --copper:#b8701f;
+  --copper-dark:#8f5414;
+  --bg:#f2f3f1;
+  --paper:#ffffff;
+  --text:#1b2228;
+  --muted:#4a5560;
+  --line:#d6dad8;
+  --fail:#3a4752;
+  --head:"Barlow Condensed", "Arial Narrow", sans-serif;
+  --body:"Source Sans 3", "Segoe UI", sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--body);font-size:1.0625rem;line-height:1.6;color:var(--text);background:var(--bg);overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--head);line-height:1.05;margin:0 0 .5em;letter-spacing:.01em;text-transform:uppercase}
+h1{font-size:clamp(2.8rem,9vw,5.6rem);font-weight:700}
+h2{font-size:clamp(2rem,5.5vw,3.3rem);font-weight:700}
+h3{font-size:clamp(1.35rem,3vw,1.75rem);font-weight:600}
+p{margin:0 0 1em}
+:focus-visible{outline:3px solid var(--copper);outline-offset:3px}
+.skip{position:absolute;left:-999px;top:0;background:var(--copper-dark);color:#fff;padding:.6rem 1rem;z-index:100}
+.skip:focus{left:1rem;top:1rem}
+.wrap{width:100%;max-width:1240px;margin:0 auto;padding:0 1.25rem}
+.eyebrow{display:inline-block;font-family:var(--head);font-weight:600;text-transform:uppercase;letter-spacing:.14em;font-size:.95rem;color:var(--copper-dark);margin-bottom:.75rem}
+.eyebrow::before{content:"";display:inline-block;width:28px;height:3px;background:var(--copper);vertical-align:middle;margin-right:.6rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font-family:var(--head);font-weight:600;font-size:1.15rem;text-transform:uppercase;letter-spacing:.06em;padding:.85rem 1.5rem;text-decoration:none;border:2px solid transparent;transition:background .2s,color .2s,border-color .2s;min-height:48px}
+.btn-primary{background:var(--copper-dark);color:#fff}
+.btn-primary:hover{background:#74430f}
+.btn-ghost{border-color:currentColor;color:var(--slate)}
+.btn-ghost:hover{background:var(--slate);color:#fff;border-color:var(--slate)}
+.btn-light{border-color:#fff;color:#fff}
+.btn-light:hover{background:#fff;color:var(--slate)}
+.img-box{background:var(--slate-2);overflow:hidden;position:relative}
+.img-box img{width:100%;height:100%;object-fit:cover}
+.img-box.img-fail{background:var(--fail)}
+
+/* Header */
+.site-header{position:sticky;top:0;z-index:50;background:var(--slate);color:#fff;border-bottom:3px solid var(--copper)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:68px}
+.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none}
+.brand .logo{width:46px;height:46px;background:#fff;flex-shrink:0}
+.brand .logo img{object-fit:contain;padding:3px}
+.brand .logo.img-fail{background:var(--copper)}
+.brand span{font-family:var(--head);font-weight:700;font-size:1.5rem;text-transform:uppercase;letter-spacing:.04em}
+.menu-toggle{background:none;border:2px solid rgba(255,255,255,.5);color:#fff;width:48px;height:48px;display:inline-flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;cursor:pointer}
+.menu-toggle span{display:block;width:22px;height:2px;background:#fff;transition:transform .2s,opacity .2s}
+.menu-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.menu-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+.menu-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.nav{position:absolute;left:0;right:0;top:100%;background:var(--slate);display:none;border-bottom:3px solid var(--copper)}
+.nav.open{display:block}
+.nav ul{list-style:none;margin:0;padding:.5rem 1.25rem 1.25rem}
+.nav a{display:block;padding:.8rem 0;text-decoration:none;font-family:var(--head);font-size:1.3rem;text-transform:uppercase;letter-spacing:.05em;border-bottom:1px solid rgba(255,255,255,.12)}
+.nav a:hover{color:#f0b866}
+.nav .nav-call{margin-top:1rem;border:0;background:var(--copper-dark);text-align:center;padding:.85rem}
+
+/* Hero */
+.hero{background:var(--paper);padding:2.5rem 0 0}
+.hero-grid{display:grid;gap:2rem}
+.hero h1 span{display:block;color:var(--copper-dark)}
+.hero .lead{font-size:1.2rem;color:var(--muted);max-width:34ch}
+.hero .actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.5rem}
+.hero .img-box{aspect-ratio:4/3;box-shadow:12px 12px 0 var(--copper)}
+.facts{display:grid;grid-template-columns:1fr;margin-top:2.5rem;background:var(--slate);color:#fff}
+.fact{padding:1.4rem 1.25rem;border-bottom:1px solid rgba(255,255,255,.12)}
+.fact strong{display:block;font-family:var(--head);font-size:1.45rem;text-transform:uppercase;letter-spacing:.03em;color:#f0b866}
+.fact a{color:#fff}
+
+/* Sections */
+section{padding:4rem 0}
+.about-grid{display:grid;gap:2.5rem;align-items:center}
+.about-media{position:relative;padding-bottom:3rem}
+.about-media .main{aspect-ratio:4/5;max-height:560px;width:85%}
+.about-media .inset{position:absolute;right:0;bottom:0;width:48%;aspect-ratio:1/1;border:6px solid var(--bg)}
+.about p{color:var(--muted)}
+.steps{display:grid;grid-template-columns:1fr;gap:0;margin-top:2.5rem;border-top:3px solid var(--slate)}
+.step{padding:1.3rem 0;border-bottom:1px solid var(--line)}
+.step .num{font-family:var(--head);font-weight:700;font-size:2.4rem;color:var(--copper);line-height:1}
+.step h3{margin:.3rem 0 .3rem;font-size:1.35rem}
+.step p{margin:0;font-size:1rem}
+
+.services{background:var(--paper)}
+.service-row{display:grid;gap:1.5rem;align-items:center;margin-top:2.5rem}
+.service-row .img-box{aspect-ratio:16/10}
+.service-row p{color:var(--muted)}
+.cards{display:grid;grid-template-columns:1fr;gap:1rem;margin-top:3rem}
+.card{background:var(--bg);padding:1.5rem;border-left:4px solid var(--copper)}
+.card h3{font-size:1.3rem;margin-bottom:.4rem}
+.card p{margin:0;color:var(--muted);font-size:1rem}
+
+.gallery-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.75rem;margin-top:2rem}
+.gallery-grid .img-box{aspect-ratio:1/1}
+.gallery-note{color:var(--muted);max-width:60ch}
+
+.cta{position:relative;color:#fff;padding:5rem 0;overflow:hidden;background:var(--slate)}
+.cta .bg{position:absolute;inset:0}
+.cta .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(18,24,30,.92),rgba(18,24,30,.78))}
+.cta .wrap{position:relative;z-index:1}
+.cta p{max-width:48ch;font-size:1.15rem;color:#e6e9ec}
+.cta .phone-big{display:block;font-family:var(--head);font-weight:700;font-size:clamp(2rem,7vw,3.4rem);color:#f0b866;text-decoration:none;margin:.5rem 0 1.5rem}
+
+.contact-grid{display:grid;gap:2rem}
+.contact-items{display:grid;grid-template-columns:1fr;gap:1rem}
+.c-item{background:var(--paper);padding:1.5rem;border-top:4px solid var(--slate)}
+.c-item h3{font-size:1.25rem;margin-bottom:.4rem;color:var(--copper-dark)}
+.c-item p{margin:0;color:var(--muted)}
+.c-item a{font-weight:700;color:var(--text);word-break:break-word}
+.contact .intro{color:var(--muted);max-width:52ch}
+
+footer{background:var(--slate);color:#dfe3e6;padding:2.5rem 0 1.5rem}
+footer .f-name{font-family:var(--head);font-size:1.6rem;text-transform:uppercase;color:#fff;margin-bottom:.4rem}
+footer ul{list-style:none;padding:0;margin:0 0 1.5rem}
+footer li{margin:.2rem 0}
+footer a{color:#fff}
+footer .credit{font-size:.85rem;border-top:1px solid rgba(255,255,255,.15);padding-top:1rem;color:#b9c1c8}
+footer .credit a{color:#f0b866}
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+
+@media (min-width:768px){
+  .wrap{padding:0 2rem}
+  section{padding:5.5rem 0}
+  .facts{grid-template-columns:repeat(3,1fr)}
+  .fact{border-bottom:0;border-right:1px solid rgba(255,255,255,.12);padding:1.6rem 1.75rem}
+  .fact:last-child{border-right:0}
+  .steps{grid-template-columns:repeat(2,1fr);column-gap:2rem}
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .service-row{grid-template-columns:1fr 1fr;gap:2.5rem}
+  .service-row.flip .img-box{order:2}
+  .gallery-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .contact-items{grid-template-columns:repeat(2,1fr)}
+}
+@media (min-width:1024px){
+  .menu-toggle{display:none}
+  .nav{position:static;display:block;background:none;border:0}
+  .nav ul{display:flex;align-items:center;gap:1.75rem;padding:0}
+  .nav a{border:0;padding:.4rem 0;font-size:1.1rem}
+  .nav .nav-call{margin:0;padding:.6rem 1.1rem}
+  .hero{padding-top:4rem}
+  .hero-grid{grid-template-columns:1.05fr 1fr;align-items:center;gap:3.5rem}
+  .about-grid{grid-template-columns:1fr 1.1fr;gap:4.5rem}
+  .steps{grid-template-columns:repeat(4,1fr)}
+  .cards{grid-template-columns:repeat(4,1fr)}
+  .contact-grid{grid-template-columns:1fr 1.3fr;align-items:start;gap:4rem}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+  *{transition:none!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#tartalom">Ugrás a tartalomra</a>
+
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="Mester Tető – vissza az oldal tetejére">
+      <div class="img-box logo"><img src="https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=EB-SAiPrYo5lozEL7hz29g&amp;cb_client=search.unparseable.grass&amp;w=1111&amp;h=1920&amp;yaw=195.24626&amp;pitch=0&amp;thumbfov=100" alt="Mester Tető logó" width="46" height="46" onerror="this.parentNode.classList.add('img-fail');this.style.display='none'"></div>
+      <span>Mester Tető</span>
+    </a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="fomenu" aria-label="Menü megnyitása">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav" id="fomenu" aria-label="Főmenü">
+      <ul>
+        <li><a href="#rolunk">Rólunk</a></li>
+        <li><a href="#szolgaltatasok">Szolgáltatások</a></li>
+        <li><a href="#munkaink">Képek</a></li>
+        <li><a href="#kapcsolat">Kapcsolat</a></li>
+        <li><a class="nav-call" href="tel:+36703133973">Hívás</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="tartalom">
+  <section class="hero" id="top">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <span class="eyebrow">Tetőfedő</span>
+          <h1>Mester Tető <span>Tető, ami véd</span></h1>
+          <p class="lead">Tetőfedési, felújítási vagy javítási munkát tervez? Hívjon, és beszéljük meg, mire van szüksége a házának.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="tel:+36703133973">Hívás: +36 70 313 3973</a>
+            <a class="btn btn-ghost" href="#szolgaltatasok">Szolgáltatások</a>
+          </div>
+        </div>
+        
+      </div>
+      <div class="facts">
+        <div class="fact"><strong>Tetőfedés</strong>Ez a szakterületünk, ehhez értünk.</div>
+        <div class="fact"><strong>Telefonon</strong><a href="tel:+36703133973">+36 70 313 3973</a></div>
+        <div class="fact"><strong>Facebookon</strong><a href="https://www.facebook.com/profile.php?id=61591715376362" target="_blank" rel="noopener">Írjon nekünk üzenetet</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="rolunk" class="about">
+    <div class="wrap">
+      <div class="about-grid">
+        <div class="about-media reveal">
+          <div class="img-box main"><img src="https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=EB-SAiPrYo5lozEL7hz29g&amp;cb_client=search.unparseable.grass&amp;w=1111&amp;h=1920&amp;yaw=195.24626&amp;pitch=0&amp;thumbfov=100" alt="Utcakép a Mester Tető környékéről" loading="lazy" width="555" height="960" onerror="this.parentNode.classList.add('img-fail');this.style.display='none'"></div>
+          
+        </div>
+        <div class="reveal">
+          <span class="eyebrow">Rólunk</span>
+          <h2>Tetőfedés, ahogy egy tetőnek járnia kell</h2>
+          <p>A tető az egész házat védi az esőtől, a széltől és a hótól. Ha itt hiba van, az előbb-utóbb a falakon és a födémen is megjelenik.</p>
+          <p>Ezért a munka a pontos egyeztetéssel kezdődik: elmondja, mi a gond vagy mit tervez, mi pedig megbeszéljük Önnel a lehetőségeket.</p>
+          <a class="btn btn-primary" href="tel:+36703133973">Egyeztessünk telefonon</a>
+        </div>
+      </div>
+      <div class="steps">
+        <div class="step reveal"><div class="num">01</div><h3>Hívjon</h3><p>Telefonon gyorsan elmondhatja, milyen munkáról van szó.</p></div>
+        <div class="step reveal"><div class="num">02</div><h3>Egyeztetés</h3><p>Megbeszéljük a tető állapotát és az Ön elképzeléseit.</p></div>
+        <div class="step reveal"><div class="num">03</div><h3>Kivitelezés</h3><p>A megbeszéltek szerint elvégezzük a tetőfedési munkát.</p></div>
+        <div class="step reveal"><div class="num">04</div><h3>Átadás</h3><p>A kész tetőt Önnel együtt nézzük át.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="szolgaltatasok" class="services">
+    <div class="wrap">
+      <span class="eyebrow">Szolgáltatások</span>
+      <h2>Tetőmunkák egy kézből</h2>
+      <div class="service-row reveal">
+        <div class="img-box"><img src="https://mesterteto.hu/admin/picture.php?pic=../hirek-jobb/hirek_elemei/1356893412/pic.jpg&amp;size=210" alt="Tetőfedéshez kapcsolódó kép a Mester Tető anyagaiból" loading="lazy" width="210" height="131" onerror="this.parentNode.classList.add('img-fail');this.style.display='none'"></div>
+        <div>
+          <h3>Tetőfedés</h3>
+          <p>Új tető fedése vagy a régi héjazat cseréje. A részleteket, az anyagot és a menetet telefonon egyeztetjük Önnel.</p>
+        </div>
+      </div>
+      <div class="service-row flip reveal">
+        <div class="img-box"><img src="https://mesterteto.hu/admin/picture.php?pic=../hirek-jobb/hirek_elemei/1354216176/pic.jpg&amp;size=210" alt="Tetőfelújításhoz kapcsolódó kép a Mester Tető anyagaiból" loading="lazy" width="210" height="131" onerror="this.parentNode.classList.add('img-fail');this.style.display='none'"></div>
+        <div>
+          <h3>Tetőfelújítás és javítás</h3>
+          <p>Elöregedett, sérült vagy beázó tető esetén érdemes időben lépni. Mondja el, mit tapasztal, és megbeszéljük a teendőket.</p>
+        </div>
+      </div>
+      <div class="cards">
+        <div class="card reveal"><h3>Új tető</h3><p>Fedés új építésű házra, a terveknek megfelelően.</p></div>
+        <div class="card reveal"><h3>Héjazatcsere</h3><p>A régi, elhasznált fedés cseréje.</p></div>
+        <div class="card reveal"><h3>Javítás</h3><p>Sérült, hiányzó vagy elmozdult elemek pótlása.</p></div>
+        <div class="card reveal"><h3>Egyeztetés</h3><p>Kérdéseire telefonon vagy Facebookon válaszolunk.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="munkaink" class="gallery">
+    <div class="wrap">
+      <span class="eyebrow">Képek</span>
+      <h2>Tetőfedés a gyakorlatban</h2>
+      <p class="gallery-note">Válogatás a Mester Tető képeiből. Továbbiakat a Facebook-oldalunkon talál.</p>
+      <div class="gallery-grid">
+        <div class="img-box reveal"><img src="https://mesterteto.hu/admin/picture.php?pic=../bannerek-jobb/bannerek_elemei/1284664299/pic.jpg&amp;size=210" alt="Kép a Mester Tető galériájából, 1." loading="lazy" width="210" height="210" onerror="this.parentNode.classList.add('img-fail');this.style.display='none'"></div>
+        <div class="img-box reveal"><img src="https://mesterteto.hu/admin/picture.php?pic=../hirek/hirek_elemei/1354824164/pic.jpg&amp;size=210" alt="Kép a Mester Tető galériájából, 2." loading="lazy" width="210" height="210" onerror="this.parentNode.classList.add('img-fail');this.style.display='none'"></div>
+        <div class="img-box reveal"><img src="https://mesterteto.hu/admin/picture.php?pic=../hirek/hirek_elemei/1354824103/pic.jpg&amp;size=210" alt="Kép a Mester Tető galériájából, 3." loading="lazy" width="210" height="210" onerror="this.parentNode.classList.add('img-fail');this.style.display='none'"></div>
+        <div class="img-box reveal"><img src="https://mesterteto.hu/admin/picture.php?pic=../hirek/hirek_elemei/1300637632/pic.jpg&amp;size=210" alt="Kép a Mester Tető galériájából, 4." loading="lazy" width="210" height="210" onerror="this.parentNode.classList.add('img-fail');this.style.display='none'"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="bg img-box"><img src="https://mesterteto.hu/admin/picture.php?pic=../bannerek-kozep/bannerek_elemei/1284665189/pic.jpg&amp;size=480" alt="" loading="lazy" width="480" height="270" onerror="this.parentNode.classList.add('img-fail');this.style.display='none'"></div>
+    <div class="wrap reveal">
+      <h2>Tetőfedőt keres a házához?</h2>
+      <p>Ne várja meg, amíg a kis hibából beázás lesz. Hívjon, és beszéljük meg a tetőjét.</p>
+      <a class="phone-big" href="tel:+36703133973">+36 70 313 3973</a>
+      <a class="btn btn-light" href="tel:+36703133973">Hívjon most</a>
+    </div>
+  </section>
+
+  <section id="kapcsolat" class="contact">
+    <div class="wrap contact-grid">
+      <div class="reveal">
+        <span class="eyebrow">Kapcsolat</span>
+        <h2>Hívjon, egyeztessünk</h2>
+        <p class="intro">A leggyorsabban telefonon ér el minket. Ha inkább írna, küldjön üzenetet a Facebook-oldalunkon.</p>
+        <a class="btn btn-primary" href="tel:+36703133973">Hívás: +36 70 313 3973</a>
+      </div>
+      <div class="contact-items">
+        <div class="c-item reveal"><h3>Telefon</h3><p><a href="tel:+36703133973">+36 70 313 3973</a></p></div>
+        <div class="c-item reveal"><h3>Facebook</h3><p><a href="https://www.facebook.com/profile.php?id=61591715376362" target="_blank" rel="noopener">Mester Tető Facebook-oldala</a></p></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-name">Mester Tető</div>
+    <ul>
+      <li>Tetőfedő</li>
+      <li>Telefon: <a href="tel:+36703133973">+36 70 313 3973</a></li>
+      <li><a href="https://www.facebook.com/profile.php?id=61591715376362" target="_blank" rel="noopener">Facebook</a></li>
+    </ul>
+    <p class="credit">Készítette: <a href="https://auracode.hu" target="_blank" rel="noopener">AuraCode</a></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn=document.querySelector('.menu-toggle');
+  var nav=document.getElementById('fomenu');
+  function close(){nav.classList.remove('open');btn.setAttribute('aria-expanded','false');btn.setAttribute('aria-label','Menü megnyitása');}
+  btn.addEventListener('click',function(){
+    var open=nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded',open?'true':'false');
+    btn.setAttribute('aria-label',open?'Menü bezárása':'Menü megnyitása');
+  });
+  nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',close);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&nav.classList.contains('open')){close();btn.focus();}});
+
+  document.querySelectorAll('img').forEach(function(img){
+    if(img.complete&&img.naturalWidth===0&&img.getAttribute('src')){img.parentNode.classList.add('img-fail');img.style.display='none';}
+  });
+
+  var items=document.querySelectorAll('.reveal');
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduce||!('IntersectionObserver' in window)){items.forEach(function(el){el.classList.add('in');});return;}
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});
+  },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  items.forEach(function(el){io.observe(el);});
+})();
+</script>
+
+</body></html>
