@@ -4,6 +4,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Kolibri Fitness – Edzés, mozgás, lendület</title>
 <meta name="description" content="Kolibri Fitness – kérdése van az edzéssel kapcsolatban? Hívjon minket a +36 70 940 4618 telefonszámon, és egyeztessük a részleteket.">
+<!--
+  MEGJEGYZÉS A MÓDOSÍTÁSHOZ:
+  A kérés szerint a jelenlegi weboldal (https://www.kolibri.fitness/) tartalmát
+  és hero képét kellett volna átvenni. A weboldal tartalma (szövegek, cím,
+  nyitvatartás, árak, képek URL-jei) NEM érkezett meg a kéréssel, és élő oldalt
+  lekérni nem tudok. Kitalált adatot nem írtam be.
+
+  Teendő a valódi adatok átvételéhez:
+  1) HERO KÉP: másolja be a kolibri.fitness hero képének teljes URL-jét az
+     alábbi helyekre (keresse: "VALODI-HERO-KEP-URL"):
+       - .hero-media <img> src attribútuma
+       - <video> poster attribútuma
+       - a "Rólunk" szekció képe (opcionális)
+     Amíg ez nincs megadva, a meglévő kép marad a helyén.
+  2) FONTOS INFÓK (cím, nyitvatartás, szolgáltatások, e-mail): a meglévő
+     szövegből másolja be őket a "Kapcsolat" és a "Rólunk" szekció jelölt
+     helyeire (keresse: "VALODI-ADAT").
+-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&amp;family=Source+Sans+3:wght@400;600;700&amp;display=swap&amp;subset=latin-ext" rel="stylesheet">
@@ -71,7 +89,7 @@ section{padding:4.5rem 0}
 .nav-links .nav-cta{margin-top:.8rem;border:0;background:var(--lime);color:var(--ink);text-align:center;font-weight:700}
 .nav-links .nav-cta:hover{color:var(--ink);background:#d8ff55}
 
-/* Hero – videós háttér */
+/* Hero – kép / videó háttér */
 .hero{position:relative;background:var(--ink);color:var(--on-dark);padding:0;overflow:hidden;isolation:isolate}
 .hero-media{position:absolute;inset:0;z-index:-2;background:var(--fail)}
 .hero-media img,.hero-media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
@@ -139,6 +157,7 @@ section{padding:4.5rem 0}
 .contact dt{font-family:var(--head);text-transform:uppercase;letter-spacing:.14em;font-size:.95rem;color:var(--muted);font-weight:600}
 .contact dd{margin:.15rem 0 0;font-size:1.2rem;font-weight:600}
 .contact dd a{text-decoration-thickness:2px;text-underline-offset:3px}
+.contact dd.soft{font-weight:400;font-size:1.05rem}
 .big-phone{font-family:var(--head);font-size:clamp(2.4rem,9vw,4rem);font-weight:800;color:var(--text);text-decoration:none;line-height:1;display:inline-block;border-bottom:4px solid var(--lime)}
 .big-phone:hover{color:var(--emerald)}
 .contact-note{color:var(--muted);max-width:32rem}
@@ -213,10 +232,13 @@ section{padding:4.5rem 0}
 <main id="tartalom">
   <section class="hero" id="kezdes" aria-labelledby="hero-cim">
     <!--
-      HERO VIDEÓ: a kérésben nem érkezett konkrét videófájl / URL.
-      A videó beillesztéséhez írja be a valódi MP4 fájl címét a <video> elem
-      data-src attribútumába (pl. data-src="https://www.kolibri.fitness/.../hero.mp4").
-      Amíg ez üres, a meglévő fotó jelenik meg háttérként.
+      VALODI-HERO-KEP-URL:
+      A kolibri.fitness jelenlegi hero képének URL-je nem érkezett meg a kéréssel.
+      Ha megvan, cserélje le vele az alábbi <img> src és a <video> poster értékét.
+      Addig a meglévő hero kép marad.
+
+      HERO VIDEÓ (opcionális): a valódi MP4 fájl címét a <video> elem
+      data-src attribútumába írja. Amíg üres, a fotó jelenik meg háttérként.
     -->
     <div class="hero-media" id="hero-media" aria-hidden="true">
       <img src="https://images.pexels.com/photos/40371849/pexels-photo-40371849.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1920" alt="" onerror="this.parentElement.classList.add('img-fail')">
@@ -268,6 +290,7 @@ section{padding:4.5rem 0}
         <p class="eyebrow">Rólunk</p>
         <h2 id="rolunk-cim">A Kolibri Fitness a mozgásról szól</h2>
         <p>A kolibri kicsi, de fáradhatatlan. <strong>Kitartás, könnyedség, energia</strong> – ezt a szemléletet viszi a nevében a Kolibri Fitness.</p>
+        <!-- VALODI-ADAT: ide másolhatók a kolibri.fitness oldalon szereplő bemutatkozó szövegek, szolgáltatások. -->
         <p>Minden aktuális információról telefonon szívesen tájékoztatjuk. További részleteket jelenlegi weboldalunkon is talál: <a href="https://www.kolibri.fitness/" target="_blank" rel="noopener">kolibri.fitness</a>.</p>
       </div>
       <div class="about-media reveal">
@@ -322,7 +345,8 @@ section{padding:4.5rem 0}
           </div>
           <div>
             <dt>Cím és nyitvatartás</dt>
-            <dd style="font-weight:400;font-size:1.05rem">Érdeklődjön telefonon, szívesen tájékoztatjuk.</dd>
+            <!-- VALODI-ADAT: a kolibri.fitness oldalon szereplő pontos cím és nyitvatartás ide írható. -->
+            <dd class="soft">Érdeklődjön telefonon, szívesen tájékoztatjuk.</dd>
           </div>
         </dl>
       </div>
