@@ -37,7 +37,7 @@
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{margin:0;font-family:var(--body);font-size:1.0625rem;line-height:1.6;color:var(--text);background:var(--paper);overflow-x:hidden}
-img{max-width:100%;display:block}
+img,video{max-width:100%;display:block}
 a{color:var(--emerald)}
 a:hover{color:var(--emerald-dark)}
 :focus-visible{outline:3px solid var(--lime);outline-offset:3px;box-shadow:0 0 0 6px var(--ink)}
@@ -71,11 +71,14 @@ section{padding:4.5rem 0}
 .nav-links .nav-cta{margin-top:.8rem;border:0;background:var(--lime);color:var(--ink);text-align:center;font-weight:700}
 .nav-links .nav-cta:hover{color:var(--ink);background:#d8ff55}
 
-/* Hero */
+/* Hero – videós háttér */
 .hero{position:relative;background:var(--ink);color:var(--on-dark);padding:0;overflow:hidden;isolation:isolate}
-.hero-media{position:absolute;inset:-20px;z-index:-2;background:var(--fail)}
-.hero-media img{width:100%;height:100%;object-fit:cover;filter:blur(6px) saturate(1.1)}
-.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(100deg,rgba(14,23,25,.96) 0%,rgba(14,23,25,.86) 55%,rgba(11,110,96,.55) 100%)}
+.hero-media{position:absolute;inset:0;z-index:-2;background:var(--fail)}
+.hero-media img,.hero-media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-media img{filter:saturate(1.1)}
+.hero-media video{opacity:0;transition:opacity 1s ease}
+.hero-media.has-video video{opacity:1}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(100deg,rgba(14,23,25,.94) 0%,rgba(14,23,25,.78) 55%,rgba(11,110,96,.5) 100%)}
 .hero-inner{min-height:calc(88vh - 66px);display:flex;flex-direction:column;justify-content:center;padding:4rem 1.25rem 4.5rem}
 .hero .eyebrow{color:var(--lime)}
 .hero h1{font-size:clamp(3.4rem,15vw,8.5rem);font-weight:800;text-transform:uppercase;margin-bottom:.25em;max-width:12ch}
@@ -88,6 +91,9 @@ section{padding:4.5rem 0}
 .btn-ghost{border-color:var(--on-dark-muted);color:var(--on-dark)}
 .btn-ghost:hover{border-color:var(--lime);color:var(--lime)}
 .btn svg{width:20px;height:20px;flex:none}
+.video-toggle{position:absolute;right:1.25rem;bottom:4.2rem;z-index:2;background:rgba(14,23,25,.7);border:2px solid var(--on-dark-muted);color:var(--on-dark);font-family:var(--head);text-transform:uppercase;letter-spacing:.1em;font-size:.95rem;padding:.4rem .8rem;cursor:pointer;display:none}
+.video-toggle:hover{border-color:var(--lime);color:var(--lime)}
+.hero-media.has-video ~ .video-toggle{display:block}
 .hero-strip{border-top:1px solid rgba(255,255,255,.12);display:flex;flex-wrap:wrap;gap:.4rem 1.6rem;padding:1rem 1.25rem;font-family:var(--head);text-transform:uppercase;letter-spacing:.14em;color:var(--on-dark-muted);font-size:.95rem}
 .hero-strip b{color:var(--lime);font-weight:600}
 
@@ -109,11 +115,10 @@ section{padding:4.5rem 0}
 .about-text p{color:var(--on-dark-muted);max-width:36rem}
 .about-text p strong{color:var(--on-dark)}
 .about-text a{color:var(--lime)}
-.about-media{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;align-items:end}
+.about-media{display:grid;grid-template-columns:1fr;gap:.75rem;align-items:end}
 .frame{background:var(--fail);overflow:hidden;position:relative}
 .frame img{width:100%;height:100%;object-fit:cover}
-.frame-a{aspect-ratio:3/4;grid-row:span 1}
-.frame-b{aspect-ratio:4/5;margin-bottom:2.5rem}
+.frame-b{aspect-ratio:4/5;max-width:28rem}
 .frame-b::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(11,110,96,.45))}
 .caption{font-size:.85rem;color:var(--on-dark-muted);margin-top:.6rem;grid-column:1/-1}
 
@@ -160,6 +165,7 @@ section{padding:4.5rem 0}
   .wrap{padding:0 2rem}
   .hero-inner{padding:5rem 2rem 6rem}
   .hero-strip{padding:1.1rem 2rem}
+  .video-toggle{right:2rem}
   .step-list{grid-template-columns:repeat(3,1fr);gap:2rem}
   .step{padding:4.2rem 0 1.6rem;border-bottom:2px solid var(--text)}
   .step::before{top:1rem}
@@ -174,6 +180,7 @@ section{padding:4.5rem 0}
   .nav-links a{border:0;padding:.3rem 0;font-size:1.1rem}
   .nav-links .nav-cta{margin:0;padding:.5rem 1.1rem}
   .about-grid{grid-template-columns:1fr 1fr;align-items:center;gap:4rem}
+  .about-media{justify-items:end}
   .gallery-grid{grid-template-columns:2fr 1fr;grid-template-rows:repeat(2,1fr)}
   .gallery-grid .g-item:first-child{grid-column:auto;grid-row:span 2;aspect-ratio:auto}
   .gallery-grid .g-item{aspect-ratio:4/3}
@@ -205,7 +212,17 @@ section{padding:4.5rem 0}
 
 <main id="tartalom">
   <section class="hero" id="kezdes" aria-labelledby="hero-cim">
-    
+    <!--
+      HERO VIDEÓ: a kérésben nem érkezett konkrét videófájl / URL.
+      A videó beillesztéséhez írja be a valódi MP4 fájl címét a <video> elem
+      data-src attribútumába (pl. data-src="https://www.kolibri.fitness/.../hero.mp4").
+      Amíg ez üres, a meglévő fotó jelenik meg háttérként.
+    -->
+    <div class="hero-media" id="hero-media" aria-hidden="true">
+      <img src="https://images.pexels.com/photos/40371849/pexels-photo-40371849.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1920" alt="" onerror="this.parentElement.classList.add('img-fail')">
+      <video id="hero-video" muted loop playsinline preload="none" data-src="" poster="https://images.pexels.com/photos/40371849/pexels-photo-40371849.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1920"></video>
+    </div>
+    <button class="video-toggle" id="video-toggle" type="button" aria-pressed="false">Videó szüneteltetése</button>
     <div class="wrap hero-inner">
       <p class="eyebrow">Kolibri Fitness</p>
       <h1 id="hero-cim">Mozgás. <em>Lendület.</em></h1>
@@ -254,11 +271,10 @@ section{padding:4.5rem 0}
         <p>Minden aktuális információról telefonon szívesen tájékoztatjuk. További részleteket jelenlegi weboldalunkon is talál: <a href="https://www.kolibri.fitness/" target="_blank" rel="noopener">kolibri.fitness</a>.</p>
       </div>
       <div class="about-media reveal">
-        
         <div class="frame frame-b">
           <img src="https://images.pexels.com/photos/40371849/pexels-photo-40371849.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1440" alt="Illusztrációs hangulatkép edzésről" loading="lazy" onerror="this.parentElement.classList.add('img-fail')">
         </div>
-        <p class="caption">A jobb oldali kép illusztráció (stock fotó).</p>
+        <p class="caption">A kép illusztráció (stock fotó).</p>
       </div>
     </div>
   </section>
@@ -339,8 +355,30 @@ section{padding:4.5rem 0}
 
   document.getElementById('ev').textContent=new Date().getFullYear();
 
-  var els=document.querySelectorAll('.reveal');
   var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* Hero videó: csak akkor töltődik be, ha a data-src ki van töltve */
+  var media=document.getElementById('hero-media');
+  var video=document.getElementById('hero-video');
+  var toggle=document.getElementById('video-toggle');
+  var src=(video.getAttribute('data-src')||'').trim();
+  if(src && !reduce){
+    var s=document.createElement('source');
+    s.src=src;s.type='video/mp4';
+    video.appendChild(s);
+    video.addEventListener('canplay',function(){media.classList.add('has-video');},{once:true});
+    video.addEventListener('error',function(){media.classList.remove('has-video');},true);
+    s.addEventListener('error',function(){media.classList.remove('has-video');});
+    video.load();
+    var p=video.play();
+    if(p&&p.catch){p.catch(function(){});}
+    toggle.addEventListener('click',function(){
+      if(video.paused){video.play();toggle.textContent='Videó szüneteltetése';toggle.setAttribute('aria-pressed','false');}
+      else{video.pause();toggle.textContent='Videó lejátszása';toggle.setAttribute('aria-pressed','true');}
+    });
+  }
+
+  var els=document.querySelectorAll('.reveal');
   if(reduce||!('IntersectionObserver' in window)){els.forEach(function(el){el.classList.add('in');});return;}
   var io=new IntersectionObserver(function(entries){
     entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});
