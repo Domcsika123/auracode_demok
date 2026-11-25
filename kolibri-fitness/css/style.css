@@ -316,6 +316,26 @@ h1, h2, h3 { margin: 0; }
   .loc-grid { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: min(82vw, 380px); overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 12px; margin-inline: calc(var(--pad) * -1); padding-inline: var(--pad); scrollbar-width: thin; }
   .loc { scroll-snap-align: start; }
 }
+@media (max-width: 600px) {
+  .loc-grid { grid-auto-columns: 84vw; gap: 12px; scroll-padding-inline: var(--pad); }
+  .loc:hover { transform: none; }
+  .loc__media { aspect-ratio: auto; height: clamp(120px, 20vh, 160px); }
+  .loc__media::after { background: linear-gradient(to top, var(--ink-2), transparent 70%); }
+  .loc__num { font-size: 3.6rem; left: 16px; bottom: -4px; }
+  .loc__body { padding: 10px 18px 18px; }
+  .loc__label { display: none; }
+  .loc__name { font-size: 2.2rem; margin-bottom: 4px; }
+  .loc__tag { font-size: 0.9rem; line-height: 1.45; margin-bottom: 10px; }
+  .loc__addr { font-size: 0.88rem; margin-bottom: 10px; }
+  .loc__meta { padding: 8px 0; margin-bottom: 12px; font-size: 0.82rem; }
+  .loc__meta strong { font-size: 1.1rem; }
+  .loc .tags { flex-wrap: nowrap; overflow: hidden; margin-bottom: 14px; gap: 6px; }
+  .loc .tags li { flex-shrink: 0; padding: 4px 10px; font-size: 0.72rem; }
+  .loc__ctas { flex-wrap: nowrap; gap: 6px; }
+  .loc__ctas .btn { --h: 42px; padding: 0 12px; font-size: 0.72rem; letter-spacing: 0.02em; gap: 6px; }
+  .loc__ctas .btn--primary { min-width: 0; }
+  .locations .section__head { margin-bottom: 28px; }
+}
 
 /* ---------- Classes ---------- */
 .filters { display: grid; gap: 12px; margin-bottom: 36px; }
